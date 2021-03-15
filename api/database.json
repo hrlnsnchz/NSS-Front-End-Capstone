@@ -1,0 +1,19 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Lionel Messi",
+            "email": "liomessi@gmail.com"
+        }
+    ],
+    "media": [
+        {
+            "id": 1,
+            "type": "movie",
+            "name": "Blade Runner 2049",
+            "genre": "sci-fi",
+            "timesRecommended": 1,
+            "availability": "HBO Max"
+        }
+    ]
+}
