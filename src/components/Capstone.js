@@ -5,26 +5,28 @@ import { Register } from "./auth/Register"
 import { userStorageKey } from "./auth/authSettings"
 
 
-// export const Capstone = () => (
-    //             <Route>
-    //                 <ApplicationViews />
-    //             </Route>      
-    // )
-<Route render={() => {
-    if (sessionStorage.getItem(userStorageKey)) {
-        return (
-            <>
-          //Components that are rendered when the user is authenticated go inside this React fragment
-        </>
-      )
-    } else {
-        return <Redirect to="/login" />;
-    }
-}} />
+                // <Route>
+                //     <ApplicationViews />
+                // </Route>      
+export const Capstone = () => (
+    <>
+            <Route render={() => {
+                if (sessionStorage.getItem(userStorageKey)) {
+                    return (
+                        <>
+                            <ApplicationViews />
+                        </>
+                    )
+                } else {
+                    return <Redirect to="/login" />;
+                }
+    }} />
 
-<Route path="/login">
-  <Login />
-</Route>
-<Route path="/register">
-  <Register />
-</Route>
+            <Route path="/login">
+            <Login />
+            </Route>
+            <Route path="/register">
+            <Register />
+            </Route>
+</>
+)
