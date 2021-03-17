@@ -9,11 +9,34 @@
     "media": [
         {
             "id": 1,
-            "type": "movie",
+            "movie": true,
             "name": "Blade Runner 2049",
-            "genre": "sci-fi",
-            "timesRecommended": 1,
-            "availability": "HBO Max"
+            "genreId": 1,
+            "streamingPlatformId": 2
         }
+    ],
+    "streamingPlatforms": [
+        {
+            "id": 1,
+            "name": "Netflix"
+        },
+        {
+            "id": 2,
+            "name": "HBO Max"
+        },
+        {
+            "id": 3,
+            "name": "Disney+"
+        }
+    ],
+    "genres": [
+        {
+            "id": 1,
+            "name": "Action"
+         },
+         {
+             "id": 2,
+             "name": "Sci-fi"
+         }
     ]
 }
