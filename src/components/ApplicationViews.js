@@ -4,6 +4,9 @@ import {MediaList} from "./media/MediaList"
 import {MediaProvider} from "./media/MediaProvider"
 import {MediaDetail} from "./media/MediaDetail"
 import {NavBar} from "./nav/NavBar"
+import { UserProvider } from "./users/UserProvider"
+import { RecommendationsList } from "./users/UserProfile"
+import { RecProvider } from "./recommendations/RecProvider"
 
 export const ApplicationViews = () => {
     return (
@@ -17,6 +20,14 @@ export const ApplicationViews = () => {
                     <NavBar />  
 		            <MediaDetail />
 	            </Route>
+            </MediaProvider>
+            <MediaProvider>
+                <UserProvider>
+                    <Route path="/profile">
+                        <NavBar />
+                        <RecommendationsList />
+                    </Route>
+                </UserProvider>
             </MediaProvider>
         </>
     )

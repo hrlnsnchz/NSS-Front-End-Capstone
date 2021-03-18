@@ -66,5 +66,13 @@
              "id": 2,
              "name": "Sci-fi"
          }
+    ],
+    "recommendations": [
+        {
+            "id": 1,
+            "userId": 1,
+            "mediaId": 1,
+            "orderOfRecommend": 1
+        }
     ]
 }
