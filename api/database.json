@@ -1,101 +1,105 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "name": "Lionel Messi",
-            "email": "liomessi@gmail.com"
-        }
-    ],
-    "media": [
-        {
-            "id": 1,
-            "movie": true,
-            "name": "Blade Runner 2049",
-            "genreId": 2,
-            "streamingPlatformId": 2
-        },
-        {
-            "id": 2,
-            "movie": true,
-            "name": "Pulp Fiction",
-            "genreId": 1,
-            "streamingPlatformId": 1
-        },
-        {
-            "id": 3,
-            "movie": true,
-            "name": "John Wick",
-            "genreId": 1,
-            "streamingPlatformId": 2
-        },
-        {
-            "id": 4,
-            "movie": true,
-            "name": "Watchmen",
-            "genreId": 2,
-            "streamingPlatformId": 2
-        },
-        {
-            "id": 5,
-            "movie": false,
-            "name": "Game of Thrones",
-            "genreId": 2,
-            "streamingPlatformId": 2
-        },
-        {
-            "id": 6,
-            "movie": true,
-            "name": "Maze Runner",
-            "genreId": 2,
-            "streamingPlatformId": 4
-        }
-    ],
-    "streamingPlatforms": [
-        {
-            "id": 1,
-            "name": "Netflix"
-        },
-        {
-            "id": 2,
-            "name": "HBO Max"
-        },
-        {
-            "id": 3,
-            "name": "Disney+"
-        },
-        {
-            "id": 4,
-            "name": "Prime Video"
-        }
-    ],
-    "genres": [
-        {
-            "id": 1,
-            "name": "Action"
-         },
-         {
-             "id": 2,
-             "name": "Sci-fi"
-         }
-    ],
-    "recommendations": [
-        {
-            "id": 1,
-            "userId": 1,
-            "mediaId": 1,
-            "orderOfRecommend": 1
-        },
-        {
-            "id": 2,
-            "userId": 1,
-            "mediaId": 2,
-            "orderOfRecommend": 2
-        },
-        {
-            "id": 3,
-            "userId": 1,
-            "mediaId": 3,
-            "orderOfRecommend": 3
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "Lionel Messi",
+      "email": "liomessi@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Antoinne Griezmann",
+      "email": "grizzy@gmail.com"
+    }
+  ],
+  "media": [
+    {
+      "id": 1,
+      "movie": true,
+      "name": "Blade Runner 2049",
+      "genreId": 2,
+      "streamingPlatformId": 2
+    },
+    {
+      "id": 2,
+      "movie": true,
+      "name": "Pulp Fiction",
+      "genreId": 1,
+      "streamingPlatformId": 1
+    },
+    {
+      "id": 3,
+      "movie": true,
+      "name": "John Wick",
+      "genreId": 1,
+      "streamingPlatformId": 2
+    },
+    {
+      "id": 4,
+      "movie": true,
+      "name": "Watchmen",
+      "genreId": 2,
+      "streamingPlatformId": 2
+    },
+    {
+      "id": 5,
+      "movie": false,
+      "name": "Game of Thrones",
+      "genreId": 2,
+      "streamingPlatformId": 2
+    },
+    {
+      "id": 6,
+      "movie": true,
+      "name": "Maze Runner",
+      "genreId": 2,
+      "streamingPlatformId": 4
+    }
+  ],
+  "streamingPlatforms": [
+    {
+      "id": 1,
+      "name": "Netflix"
+    },
+    {
+      "id": 2,
+      "name": "HBO Max"
+    },
+    {
+      "id": 3,
+      "name": "Disney+"
+    },
+    {
+      "id": 4,
+      "name": "Prime Video"
+    }
+  ],
+  "genres": [
+    {
+      "id": 1,
+      "name": "Action"
+    },
+    {
+      "id": 2,
+      "name": "Sci-fi"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": 2,
+      "userId": 1,
+      "mediaId": 2,
+      "orderOfRecommend": 2
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "mediaId": 3,
+      "orderOfRecommend": 3
+    },
+    {
+      "userId": 1,
+      "mediaId": 6,
+      "id": 5
+    }
+  ]
 }
