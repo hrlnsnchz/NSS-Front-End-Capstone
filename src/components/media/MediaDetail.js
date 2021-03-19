@@ -9,6 +9,7 @@ export const MediaDetail = () => {
   const {recs, getRecs, addRecs } = useContext(RecContext)
   const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
 
+
 	const [media, setMedia] = useState({})
 
 	const {mediaId} = useParams();
@@ -32,6 +33,7 @@ export const MediaDetail = () => {
       addRecs({
           userId: currentUser,
           mediaId: media.id,
+          orderOfRecommend: recs[0]? recs[recs.length - 1].orderOfRecommend + 1 : 1
       })
   }
 

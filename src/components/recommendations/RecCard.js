@@ -22,10 +22,9 @@ export const RecCard = ({rec, listOwner, media}) => {
       }
      
     return (
-        <section className="mediaCard">
-            
-        <div>{media.name}</div>
+        <li>
+        <div className="mediaName">{media.name}</div>
         <button onClick={handleRemove}>Remove Recommendation</button>
-        </section>
+        </li>
     )
 }
