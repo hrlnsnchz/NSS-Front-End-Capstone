@@ -4,10 +4,7 @@ import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { userStorageKey } from "./auth/authSettings"
 
-
-                // <Route>
-                //     <ApplicationViews />
-                // </Route>      
+   
 export const Capstone = () => (
     <>
             <Route render={() => {
