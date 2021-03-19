@@ -1,11 +1,10 @@
 import {Link} from "react-router-dom"
 
-export const RecCard = ({media}) => {
+export const RecCard = ({rec, listOwner, media}) => {
     return (
         <section className="mediaCard">
-            <h3>
-          {/* { media.name } */}
-        </h3>
+            
+        <div>{media.name}</div>
         </section>
     )
 }
