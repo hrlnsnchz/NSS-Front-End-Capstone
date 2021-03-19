@@ -35,12 +35,3 @@ export const RecList = () => {
         </>
 )
 }
-
-// "recommendations": [
-//     {
-//         "id": 1,
-//         "userId": 1,
-//         "mediaId": 1,
-//         "orderOfRecommend": 1
-//     }
-// ]

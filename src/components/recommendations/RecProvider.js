@@ -17,11 +17,29 @@ export const RecProvider = (props) => {
             .then(res => res.json())
     }
 
+    const addRecs = (recObj) => {
+        return fetch("http://localhost:8088/recommendations", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(recObj)
+        })
+        .then(getRecs)
+    }
+
+    const removeRec = recId => {
+        return fetch(`http://localhost:8088/recommendations/${recId}`, {
+            method: "DELETE"
+        })
+            .then(getRecs)
+    }
+
 
     return (
         <>
         <RecContext.Provider value={{
-            recs, getRecs, getRecsById
+            recs, getRecs, getRecsById, addRecs, removeRec
         }}>
             {props.children}
         </RecContext.Provider>

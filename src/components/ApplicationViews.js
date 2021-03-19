@@ -13,14 +13,16 @@ export const ApplicationViews = () => {
     return (
         <>
             <MediaProvider>
-                <Route exact path="/">
-                    <NavBar />
-                    <MediaList />
-                </Route>
-                <Route path="/detail/:mediaId(\d+)">
-                    <NavBar />  
-		            <MediaDetail />
-	            </Route>
+                <RecProvider>
+                    <Route exact path="/">
+                        <NavBar />
+                        <MediaList />
+                    </Route>
+                    <Route path="/detail/:mediaId(\d+)">
+                        <NavBar />  
+                        <MediaDetail />
+                    </Route>
+                </RecProvider>
             </MediaProvider>
             <RecProvider>
                 <MediaProvider>
