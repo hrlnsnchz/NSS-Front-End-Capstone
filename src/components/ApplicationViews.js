@@ -5,10 +5,11 @@ import {MediaProvider} from "./media/MediaProvider"
 import {MediaDetail} from "./media/MediaDetail"
 import {NavBar} from "./nav/NavBar"
 import { UserProvider } from "./users/UserProvider"
-import { RecommendationsList } from "./users/UserProfile"
 import { RecProvider } from "./recommendations/RecProvider"
 import { RecList } from "./recommendations/RecList"
 import { MediaSearch } from "./media/MediaSearch"
+import { UserList } from "./users/UserList"
+import { UserSearch } from "./users/UserSearch"
 
 export const ApplicationViews = () => {
     return (
@@ -37,6 +38,13 @@ export const ApplicationViews = () => {
                     </UserProvider>
                 </MediaProvider>
             </RecProvider>
+            <UserProvider>
+                <Route exact path="/friends">
+                    <NavBar />
+                    <UserSearch />
+                    <UserList />
+                </Route>
+            </UserProvider>
         </>
     )
 }

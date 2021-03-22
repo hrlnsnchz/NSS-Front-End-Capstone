@@ -86,12 +86,6 @@
   "recommendations": [
     {
       "userId": 1,
-      "mediaId": 1,
-      "orderOfRecommend": 2,
-      "id": 1
-    },
-    {
-      "userId": 1,
       "mediaId": 4,
       "orderOfRecommend": 3,
       "id": 4
@@ -113,6 +107,18 @@
       "mediaId": 3,
       "orderOfRecommend": 6,
       "id": 8
+    },
+    {
+      "userId": 2,
+      "mediaId": 4,
+      "orderOfRecommend": 7,
+      "id": 9
+    },
+    {
+      "userId": 2,
+      "mediaId": 2,
+      "orderOfRecommend": 8,
+      "id": 10
     }
   ]
 }
