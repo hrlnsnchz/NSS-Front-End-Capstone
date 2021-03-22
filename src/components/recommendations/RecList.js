@@ -9,7 +9,7 @@ export const RecList = () => {
     const {recs, getRecs} = useContext(RecContext)
     const {users, getUsers} = useContext(UserContext)
     const {media, getMedia} = useContext(MediaContext)
-    const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
+    // const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
     const sortedRecs = recs.sort((a, b)=> a.orderOfRecommend - b.orderOfRecommend)
     
 

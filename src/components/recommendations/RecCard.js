@@ -2,9 +2,12 @@ import React, {useState, useContext, useEffect} from "react"
 import { useHistory } from "react-router"
 import {RecContext} from "./RecProvider"
 
+
 export const RecCard = ({recObject, listOwner, media}) => {
     const {getRecs, removeRec, updateRec } = useContext(RecContext)
-    // const currentUser = parseInt(sessionStorage())
+    const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
+    
+  
 
     const [recommendation, setRec] = useState({
       "userId": 0,
@@ -17,32 +20,30 @@ export const RecCard = ({recObject, listOwner, media}) => {
       newRec[event.target.id] = event.target.value
       setRec(newRec)
     }
-
+    
     const handleSaveRec = () => {
           updateRec({
-              userId: recObject.userId,
-              mediaId: parseInt(recObject.mediaId),
+            userId: recObject.userId,
+            mediaId: parseInt(recObject.mediaId),
               orderOfRecommend: parseInt(recommendation.orderOfRecommend),
               id: recObject.id
           })
           .then(() => history.push(`/profile`))
         }
-    const history = useHistory()
-
-    useEffect(() => {
-        getRecs()
-    }, [])
-
-// Deleting
-    const handleRemove = () => {
-        removeRec(recObject.id)
+        const history = useHistory()
+        
+        
+        
+        // Deleting
+        const handleRemove = () => {
+          removeRec(recObject.id)
           .then(() => {
             history.push("/profile")
           })
-      }
-     
-    return (
-      <>
+        }
+        if (recObject.userId === currentUser) {
+        return (
+          <>
         <li>
         <div className="mediaName">{media.name}</div>
         <button onClick={handleRemove}>Remove Recommendation</button>
@@ -64,4 +65,10 @@ export const RecCard = ({recObject, listOwner, media}) => {
         Save New Hierarchy</button>
       </>  
     )
-}
+  } else {
+    return (
+      <>
+      </>
+    )
+  }
+  }
