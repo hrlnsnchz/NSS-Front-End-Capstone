@@ -17,11 +17,13 @@ export const MediaProvider = (props) => {
             .then(res => res.json())
     }
 
+    const [ searchTerms, setSearchTerms ] = useState("")
+
 
     return (
         <>
         <MediaContext.Provider value={{
-            media, getMedia, getMediaById
+            media, getMedia, getMediaById, searchTerms, setSearchTerms
         }}>
             {props.children}
         </MediaContext.Provider>

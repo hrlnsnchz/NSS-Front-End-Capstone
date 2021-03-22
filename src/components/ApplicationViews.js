@@ -8,6 +8,7 @@ import { UserProvider } from "./users/UserProvider"
 import { RecommendationsList } from "./users/UserProfile"
 import { RecProvider } from "./recommendations/RecProvider"
 import { RecList } from "./recommendations/RecList"
+import { MediaSearch } from "./media/MediaSearch"
 
 export const ApplicationViews = () => {
     return (
@@ -16,10 +17,12 @@ export const ApplicationViews = () => {
                 <RecProvider>
                     <Route exact path="/">
                         <NavBar />
+                        <MediaSearch />
                         <MediaList />
                     </Route>
                     <Route path="/detail/:mediaId(\d+)">
                         <NavBar />  
+                        <MediaSearch />
                         <MediaDetail />
                     </Route>
                 </RecProvider>
