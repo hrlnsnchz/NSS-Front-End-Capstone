@@ -10,6 +10,7 @@ export const RecList = () => {
     const {users, getUsers} = useContext(UserContext)
     const {media, getMedia} = useContext(MediaContext)
     const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
+    const sortedRecs = recs.sort((a, b)=> a.orderOfRecommend - b.orderOfRecommend)
     
 
     useEffect(() => {
@@ -21,17 +22,20 @@ export const RecList = () => {
     return (
         <>
         <h3>My List</h3>
+        <ol>
+        
             {
-                recs.map(r => {
+                sortedRecs.map(r => {
                     const listOwner = users.find(user => user.id === r.userId)
                     const listMedia = media.find(m => m.id === r.mediaId)
-                   return <RecCard key={r.id}
-                   rec={r}
-                   listOwner={listOwner}
-                   media={listMedia}
-                   />
+                    return <RecCard key={r.id}
+                    recObject={r}
+                    listOwner={listOwner}
+                    media={listMedia}
+                    />
                 })
             }
+            </ol>
         </>
 )
 }

@@ -35,11 +35,22 @@ export const RecProvider = (props) => {
             .then(getRecs)
     }
 
+    const updateRec = rec => {
+        return fetch(`http://localhost:8088/recommendations/${rec.id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(rec)
+        })
+          .then(getRecs)
+      }
+
 
     return (
         <>
         <RecContext.Provider value={{
-            recs, getRecs, getRecsById, addRecs, removeRec
+            recs, getRecs, getRecsById, addRecs, removeRec, updateRec
         }}>
             {props.children}
         </RecContext.Provider>
