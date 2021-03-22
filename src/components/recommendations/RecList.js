@@ -29,7 +29,7 @@ export const RecList = () => {
                     const listOwner = users.find(user => user.id === r.userId)
                     const listMedia = media.find(m => m.id === r.mediaId)
                     return <RecCard key={r.id}
-                    rec={r}
+                    recObject={r}
                     listOwner={listOwner}
                     media={listMedia}
                     />

@@ -8,6 +8,7 @@ export const MediaDetail = () => {
   const { getMediaById } = useContext(MediaContext)
   const {recs, getRecs, addRecs } = useContext(RecContext)
   const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
+  const sortedRecs = recs.sort((a, b)=> a.orderOfRecommend - b.orderOfRecommend)
 
 
 	const [media, setMedia] = useState({})
@@ -33,7 +34,7 @@ export const MediaDetail = () => {
       addRecs({
           userId: currentUser,
           mediaId: media.id,
-          orderOfRecommend: recs[0]? recs[recs.length - 1].orderOfRecommend + 1 : 1
+          orderOfRecommend: sortedRecs[0]? sortedRecs[sortedRecs.length - 1].orderOfRecommend + 1 : 1
       })
   }
 

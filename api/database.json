@@ -87,31 +87,25 @@
     {
       "userId": 1,
       "mediaId": 1,
-      "orderOfRecommend": 2,
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "mediaId": 3,
-      "orderOfRecommend": 3,
-      "id": 3
+      "orderOfRecommend": 1,
+      "id": 1
     },
     {
       "userId": 1,
       "mediaId": 4,
-      "orderOfRecommend": 4,
+      "orderOfRecommend": 3,
       "id": 4
     },
     {
       "userId": 1,
-      "mediaId": 5,
-      "orderOfRecommend": 5,
+      "mediaId": 3,
+      "orderOfRecommend": 4,
       "id": 5
     },
     {
       "userId": 1,
-      "mediaId": 6,
-      "orderOfRecommend": 6,
+      "mediaId": 2,
+      "orderOfRecommend": 5,
       "id": 6
     }
   ]
