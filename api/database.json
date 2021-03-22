@@ -87,7 +87,7 @@
     {
       "userId": 1,
       "mediaId": 1,
-      "orderOfRecommend": 1,
+      "orderOfRecommend": 2,
       "id": 1
     },
     {
@@ -98,15 +98,21 @@
     },
     {
       "userId": 1,
-      "mediaId": 3,
-      "orderOfRecommend": 4,
-      "id": 5
-    },
-    {
-      "userId": 1,
       "mediaId": 2,
       "orderOfRecommend": 5,
       "id": 6
+    },
+    {
+      "userId": 1,
+      "mediaId": 5,
+      "orderOfRecommend": 1,
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "mediaId": 3,
+      "orderOfRecommend": 6,
+      "id": 8
     }
   ]
 }
