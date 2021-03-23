@@ -12,7 +12,7 @@ export const RecCard = ({recObject, listOwner, media}) => {
     const [recommendation, setRec] = useState({
       "userId": 0,
       "mediaId": 0,
-      "orderOfRecommend": recObject.orderOfRecommend
+      "orderOfRecommend": 0
     })
 
     const handleControlledInputChange = (event) => {

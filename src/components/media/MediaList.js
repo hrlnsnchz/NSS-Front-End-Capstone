@@ -28,6 +28,7 @@ export const MediaList = () => {
     }, [searchTerms, media])
     return (
         <>
+        <h3>Browse Media</h3>
         <div className="mediaList">
             {
                 filteredMedia.map(m => {
@@ -37,6 +38,34 @@ export const MediaList = () => {
                 })
             }
         </div>
+
+        <h3>Action</h3>
+        <div className="mediaList">
+            {
+                media.map(m => {
+                    if (m.genreId === 1) {
+                        return <MediaCard key={m.id}
+                        media={m}
+                        />
+                    }
+                })
+            }
+        </div>
+
+        <h3>Science Fiction</h3>
+        <div className="mediaList">
+            {
+                media.map(m => {
+                    if (m.genreId === 2) {
+                        return <MediaCard key={m.id}
+                        media={m}
+                        />
+                    }
+                })
+            }
+        </div>
+
+
         <button onClick={handleLogout}>
         <Link to="/login">Logout</Link>
         </button>
