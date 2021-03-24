@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { MediaCard } from "./MediaCard"
 import { MediaContext } from "./MediaProvider"
 import {Link} from "react-router-dom"
+import "./Media.css"
 
 const handleLogout = () => {
     sessionStorage.removeItem("app_user_id")
@@ -9,6 +10,7 @@ const handleLogout = () => {
 
 export const MediaList = () => {
     const {media, getMedia, searchTerms} = useContext(MediaContext)
+     
 
     useEffect(() => {
         getMedia()
@@ -28,6 +30,10 @@ export const MediaList = () => {
     }, [searchTerms, media])
     return (
         <>
+        <button className="logout" onClick={handleLogout}>
+        <Link to="/login">{sessionStorage.getItem("app_user_id")? "Logout" : "Login"}</Link>
+        </button>
+
         <h3>Browse Media</h3>
         <div className="mediaList">
             {
@@ -66,9 +72,7 @@ export const MediaList = () => {
         </div>
 
 
-        <button onClick={handleLogout}>
-        <Link to="/login">Logout</Link>
-        </button>
+        
          
         </>
 )

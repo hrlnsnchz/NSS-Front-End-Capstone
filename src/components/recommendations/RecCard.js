@@ -44,7 +44,7 @@ export const RecCard = ({recObject, listOwner, media}) => {
         if (recObject.userId === currentUser) {
         return (
           <>
-        <li>
+        <li className="recommendation">
         <div className="mediaName">{media.name}</div>
         <button onClick={handleRemove}>Remove Recommendation</button>
         <fieldset>
