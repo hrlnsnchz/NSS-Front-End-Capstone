@@ -9,6 +9,11 @@
       "id": 2,
       "name": "Antoinne Griezmann",
       "email": "grizzy@gmail.com"
+    },
+    {
+      "email": "bob@bobby.com",
+      "name": "bob bobby",
+      "id": 3
     }
   ],
   "media": [
@@ -86,39 +91,45 @@
   "recommendations": [
     {
       "userId": 1,
-      "mediaId": 4,
+      "mediaId": 1,
+      "orderOfRecommend": 5,
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "mediaId": 2,
+      "orderOfRecommend": 2,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "mediaId": 5,
       "orderOfRecommend": 3,
       "id": 4
     },
     {
       "userId": 1,
-      "mediaId": 2,
-      "orderOfRecommend": 5,
+      "mediaId": 4,
+      "orderOfRecommend": 4,
+      "id": 5
+    },
+    {
+      "userId": 3,
+      "mediaId": 1,
+      "orderOfRecommend": 6,
       "id": 6
     },
     {
-      "userId": 1,
-      "mediaId": 5,
-      "orderOfRecommend": 1,
+      "userId": 3,
+      "mediaId": 2,
+      "orderOfRecommend": 7,
       "id": 7
     },
     {
-      "userId": 1,
+      "userId": 3,
       "mediaId": 3,
-      "orderOfRecommend": 6,
-      "id": 8
-    },
-    {
-      "userId": 2,
-      "mediaId": 4,
-      "orderOfRecommend": 7,
-      "id": 9
-    },
-    {
-      "userId": 2,
-      "mediaId": 2,
       "orderOfRecommend": 8,
-      "id": 10
+      "id": 8
     }
   ]
 }

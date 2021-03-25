@@ -7,11 +7,11 @@ export const UserSearch = () => {
   
   return (
     <>
-      Friend search:
+      {sessionStorage.getItem("app_user_id")? "Friend" : "User"} search: 
       <input type="text" 
         className="input--wide"
         onKeyUp={(event) => setSearchTerms(event.target.value)}
-        placeholder="Search for a friend... " />
+        placeholder="Search for a user... " />
     </>
   )
 }

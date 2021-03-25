@@ -12,7 +12,7 @@ export const RecCard = ({recObject, listOwner, media}) => {
     const [recommendation, setRec] = useState({
       "userId": 0,
       "mediaId": 0,
-      "orderOfRecommend": recObject.orderOfRecommend
+      "orderOfRecommend": 0
     })
 
     const handleControlledInputChange = (event) => {
@@ -44,7 +44,7 @@ export const RecCard = ({recObject, listOwner, media}) => {
         if (recObject.userId === currentUser) {
         return (
           <>
-        <li>
+        <li className="recommendation">
         <div className="mediaName">{media.name}</div>
         <button onClick={handleRemove}>Remove Recommendation</button>
         <fieldset>

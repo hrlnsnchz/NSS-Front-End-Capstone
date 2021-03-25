@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { MediaCard } from "./MediaCard"
 import { MediaContext } from "./MediaProvider"
 import {Link} from "react-router-dom"
+import "./Media.css"
 
 const handleLogout = () => {
     sessionStorage.removeItem("app_user_id")
@@ -9,6 +10,7 @@ const handleLogout = () => {
 
 export const MediaList = () => {
     const {media, getMedia, searchTerms} = useContext(MediaContext)
+     
 
     useEffect(() => {
         getMedia()
@@ -28,6 +30,11 @@ export const MediaList = () => {
     }, [searchTerms, media])
     return (
         <>
+        <button className="logout" onClick={handleLogout}>
+        <Link to="/login">{sessionStorage.getItem("app_user_id")? "Logout" : "Login"}</Link>
+        </button>
+
+        <h3>Browse Media</h3>
         <div className="mediaList">
             {
                 filteredMedia.map(m => {
@@ -37,9 +44,35 @@ export const MediaList = () => {
                 })
             }
         </div>
-        <button onClick={handleLogout}>
-        <Link to="/login">Logout</Link>
-        </button>
+
+        <h3>Action</h3>
+        <div className="mediaList">
+            {
+                media.map(m => {
+                    if (m.genreId === 1) {
+                        return <MediaCard key={m.id}
+                        media={m}
+                        />
+                    }
+                })
+            }
+        </div>
+
+        <h3>Science Fiction</h3>
+        <div className="mediaList">
+            {
+                media.map(m => {
+                    if (m.genreId === 2) {
+                        return <MediaCard key={m.id}
+                        media={m}
+                        />
+                    }
+                })
+            }
+        </div>
+
+
+        
          
         </>
 )

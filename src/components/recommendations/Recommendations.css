@@ -1,0 +1,10 @@
+.recommendationList {
+    display: flex;
+    flex-direction: column;
+}
+
+.recommendation {
+}
+
+fieldset {
+}

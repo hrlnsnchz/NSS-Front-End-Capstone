@@ -44,11 +44,11 @@ export const MediaDetail = () => {
       <div className="media__type">{media.movie? "Movie" : "TV Series"}</div>
       <div className="media__genre">Genre: {media.genre?.name}</div>
       <div className="media__platform">Streaming Platform: {media.streamingPlatform?.name}</div>
-      {<button className="btn btn-primary"
+      {sessionStorage.getItem("app_user_id")? <button className="btn btn-primary"
           onClick={event => {
             event.preventDefault()
             handleAddRec()
-          }}>Recommend It</button>}
+          }}>Recommend It</button> : ""}
     </section>
   )
 }

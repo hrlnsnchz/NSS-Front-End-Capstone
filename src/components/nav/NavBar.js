@@ -10,7 +10,7 @@ export const NavBar = (props) => {
                 <Link className="navbar__link" to="/">Home</Link>
             </li>
             <li className="navbar__item">
-                <Link className="navbar__link" to="/friends">Friends</Link>
+                <Link className="navbar__link" to="/friends">{sessionStorage.getItem("app_user_id")? "Friends" : "Users"}</Link>
             </li>
             <li className="navbar__item">
                 <Link className="navbar__link" to="/profile">My Profile</Link>

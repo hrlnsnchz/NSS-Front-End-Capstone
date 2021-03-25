@@ -3,6 +3,7 @@ import { MediaContext } from "../media/MediaProvider"
 import { UserContext } from "../users/UserProvider"
 import { RecCard } from "./RecCard"
 import { RecContext } from "./RecProvider"
+import "./Recommendations.css"
 
 
 export const RecList = () => {
@@ -22,7 +23,7 @@ export const RecList = () => {
     return (
         <>
         <h3>My List</h3>
-        <ol>
+        <ol className="recommendationList">
         
             {
                 sortedRecs.map(r => {

@@ -1,5 +1,5 @@
 import React from "react"
-import {Route} from "react-router-dom"
+import {Route, Redirect} from "react-router-dom"
 import {MediaList} from "./media/MediaList"
 import {MediaProvider} from "./media/MediaProvider"
 import {MediaDetail} from "./media/MediaDetail"
@@ -10,6 +10,8 @@ import { RecList } from "./recommendations/RecList"
 import { MediaSearch } from "./media/MediaSearch"
 import { UserList } from "./users/UserList"
 import { UserSearch } from "./users/UserSearch"
+import { Login } from "./auth/Login"
+import { Register } from "./auth/Register"
 
 export const ApplicationViews = () => {
     return (
@@ -17,12 +19,10 @@ export const ApplicationViews = () => {
             <MediaProvider>
                 <RecProvider>
                     <Route exact path="/">
-                        <NavBar />
                         <MediaSearch />
                         <MediaList />
                     </Route>
                     <Route path="/detail/:mediaId(\d+)">
-                        <NavBar />  
                         <MediaSearch />
                         <MediaDetail />
                     </Route>
@@ -31,20 +31,32 @@ export const ApplicationViews = () => {
             <RecProvider>
                 <MediaProvider>
                     <UserProvider>
-                        <Route exact path="/profile">
-                            <NavBar />
-                            <RecList />
-                        </Route>
+                        <Route exact path="/profile" render={() => sessionStorage.getItem("app_user_id") ? <RecList /> : <Redirect to="/login" />} />
                     </UserProvider>
                 </MediaProvider>
             </RecProvider>
             <UserProvider>
-                <Route exact path="/friends">
-                    <NavBar />
+            <Route exact path="/friends">
                     <UserSearch />
                     <UserList />
                 </Route>
             </UserProvider>
+
+            <Route path="/login">
+                <Login />
+            </Route>
+            <Route path="/register">
+                <Register />
+            </Route>
         </>
     )
 }
+
+// <Route exact path="/profile">
+//                             <RecList />
+//                         </Route>
+
+<Route exact path="/friends">
+                    <UserSearch />
+                    <UserList />
+                </Route>
