@@ -9,11 +9,6 @@
       "id": 2,
       "name": "Antoinne Griezmann",
       "email": "grizzy@gmail.com"
-    },
-    {
-      "email": "bob@bobby.com",
-      "name": "bob bobby",
-      "id": 3
     }
   ],
   "media": [
@@ -55,9 +50,9 @@
     {
       "id": 6,
       "movie": true,
-      "name": "Maze Runner",
-      "genreId": 2,
-      "streamingPlatformId": 4
+      "name": "Mad Max",
+      "genreId": 1,
+      "streamingPlatformId": 2
     }
   ],
   "streamingPlatforms": [
@@ -88,48 +83,5 @@
       "name": "Sci-fi"
     }
   ],
-  "recommendations": [
-    {
-      "userId": 1,
-      "mediaId": 1,
-      "orderOfRecommend": 5,
-      "id": 1
-    },
-    {
-      "userId": 1,
-      "mediaId": 2,
-      "orderOfRecommend": 2,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "mediaId": 5,
-      "orderOfRecommend": 3,
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "mediaId": 4,
-      "orderOfRecommend": 4,
-      "id": 5
-    },
-    {
-      "userId": 3,
-      "mediaId": 1,
-      "orderOfRecommend": 6,
-      "id": 6
-    },
-    {
-      "userId": 3,
-      "mediaId": 2,
-      "orderOfRecommend": 7,
-      "id": 7
-    },
-    {
-      "userId": 3,
-      "mediaId": 3,
-      "orderOfRecommend": 8,
-      "id": 8
-    }
-  ]
+  "recommendations": []
 }
