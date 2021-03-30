@@ -83,5 +83,18 @@
       "name": "Sci-fi"
     }
   ],
-  "recommendations": []
+  "recommendations": [
+    {
+      "userId": 1,
+      "mediaId": 1,
+      "orderOfRecommend": 1,
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "mediaId": 2,
+      "orderOfRecommend": 2,
+      "id": 2
+    }
+  ]
 }
