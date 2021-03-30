@@ -92,44 +92,14 @@
     {
       "userId": 1,
       "mediaId": 1,
-      "orderOfRecommend": 5,
+      "orderOfRecommend": 1,
       "id": 1
     },
     {
       "userId": 1,
       "mediaId": 2,
       "orderOfRecommend": 2,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "mediaId": 5,
-      "orderOfRecommend": 3,
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "mediaId": 4,
-      "orderOfRecommend": 4,
-      "id": 5
-    },
-    {
-      "userId": 3,
-      "mediaId": 1,
-      "orderOfRecommend": 6,
-      "id": 6
-    },
-    {
-      "userId": 3,
-      "mediaId": 2,
-      "orderOfRecommend": 7,
-      "id": 7
-    },
-    {
-      "userId": 3,
-      "mediaId": 3,
-      "orderOfRecommend": 8,
-      "id": 8
+      "id": 2
     }
   ]
 }

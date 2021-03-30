@@ -3,15 +3,14 @@ import {Route, Redirect} from "react-router-dom"
 import {MediaList} from "./media/MediaList"
 import {MediaProvider} from "./media/MediaProvider"
 import {MediaDetail} from "./media/MediaDetail"
-import {NavBar} from "./nav/NavBar"
 import { UserProvider } from "./users/UserProvider"
 import { RecProvider } from "./recommendations/RecProvider"
-import { RecList } from "./recommendations/RecList"
 import { MediaSearch } from "./media/MediaSearch"
 import { UserList } from "./users/UserList"
 import { UserSearch } from "./users/UserSearch"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
+import { RecForm } from "./recommendations/RecForm"
 
 export const ApplicationViews = () => {
     return (
@@ -31,7 +30,7 @@ export const ApplicationViews = () => {
             <RecProvider>
                 <MediaProvider>
                     <UserProvider>
-                        <Route exact path="/profile" render={() => sessionStorage.getItem("app_user_id") ? <RecList /> : <Redirect to="/login" />} />
+                        <Route exact path="/profile" render={() => sessionStorage.getItem("app_user_id") ? <RecForm /> : <Redirect to="/login" />} />
                     </UserProvider>
                 </MediaProvider>
             </RecProvider>
