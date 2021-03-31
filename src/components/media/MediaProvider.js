@@ -7,7 +7,7 @@ export const MediaProvider = (props) => {
     const [media, setMedia] = useState([])
 
     const getMedia = () => {
-        return fetch("http://localhost:8088/media")
+        return fetch("https://api.themoviedb.org/3/movie/popular?api_key=26c69b235f6f31e659dc584b010ef7f8&language=en-US&page=1")
         .then(res => res.json())
         .then(setMedia)
     }
