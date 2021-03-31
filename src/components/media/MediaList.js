@@ -4,22 +4,24 @@ import { MediaContext } from "./MediaProvider"
 import {Link} from "react-router-dom"
 import "./Media.css"
 
-// const handleLogout = () => {
-//     sessionStorage.removeItem("app_user_id")
-// }
+const handleLogout = () => {
+    sessionStorage.removeItem("app_user_id")
+}
 
 export const MediaList = () => {
     const {media, getMedia, searchTerms} = useContext(MediaContext)
     console.log('media: ', media);
-    console.log('results:'
-    )
+    
+    const [results, setResults] = useState([])
+    const slicedResults = results?.slice()
+    console.log('slicedResults: ', slicedResults);
+
     
 
-    // const nums = ids.map(n=> {
-    //     return n[0]
-    // })
+    useEffect(()=> {
+        setResults(media.results)
+    }, [media])
 
-     
 
     useEffect(() => {
         getMedia()
@@ -40,28 +42,27 @@ export const MediaList = () => {
 
     return (
         <>
-        {/* <button className="logout" onClick={handleLogout}>
+        <button className="logout" onClick={handleLogout}>
         <Link to="/login">{sessionStorage.getItem("app_user_id")? "Logout" : "Login"}</Link>
         </button>
 
-        <h3>Browse Media</h3>
+        <h3>Popular</h3>
         <div className="mediaList">
             {
-                filteredMedia.map(m => {
-                   return <MediaCard key={m.id}
-                   media={m}
-                   />
+                slicedResults?.map(m => {
+                    return <MediaCard key={m.id}
+                    media={m} />
                 })
             }
-        </div> */}
+        </div>
 
-        <h3>Action</h3>
+        {/* <h3>Action</h3>
         <div className="mediaList">
             {
                media.results.map(r => {
                 return r.title
                })
-            }
+            } */}
         {/* {
       "id": 1,
       "movie": true,
@@ -77,7 +78,7 @@ export const MediaList = () => {
       "streamingPlatformId": 2
     }, */}
 
-        </div>
+        {/* </div> */}
 
         {/* <h3>Science Fiction</h3>
         <div className="mediaList">
