@@ -13,7 +13,7 @@ export const MediaProvider = (props) => {
     }
 
     const getMediaById = (id) => {
-        return fetch(`http://localhost:8088/media/${id}?_expand=genre&_expand=streamingPlatform`)
+        return fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=26c69b235f6f31e659dc584b010ef7f8&language=en-US`)
             .then(res => res.json())
     }
 

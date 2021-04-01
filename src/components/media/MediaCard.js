@@ -3,12 +3,11 @@ import { testAPI } from "../../Settings"
 
 export const MediaCard = ({media}) => {
     const imgSize = "w500"
-    console.log(`${testAPI.baseURL}/${imgSize}/${media.poster_path}`)
     return (
         <section className="mediaCard">
-            <h3>
+            <h3><Link to={`/detail/${media.id}`}>
           { media.title }
-        </h3>
+        </Link></h3>
         <img src={`${testAPI.baseURL}/${imgSize}/${media.poster_path}`} alt={media.name, "poster"} ></img>
         </section>
     )

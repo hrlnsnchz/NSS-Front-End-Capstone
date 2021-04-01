@@ -12,6 +12,7 @@ export const RecForm = () => {
     const {media, getMedia} = useContext(MediaContext)
     // const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
     
+    
     const [sortedRecs, setSortedRecs] = useState([])
 
     useEffect(() => {
@@ -54,11 +55,21 @@ export const RecForm = () => {
     
     // Deleting
     const handleRemove = (recObject) => {
-      removeRec(recObject.id)
+      removeRec(recObject)
       .then(() => {
         history.push("/profile")
       })
     }
+
+    const [results, setResults] = useState([])
+    const slicedResults = results?.slice()
+    console.log('slicedResults: ', slicedResults);
+
+    
+
+    useEffect(()=> {
+        setResults(media.results)
+    }, [media])
     
           return (
             <>
@@ -67,12 +78,12 @@ export const RecForm = () => {
                 {sortedRecs.map((r)=> {
                   return(
                     <li className="recommendation">
-                  <div className="mediaName">{media.map((m) => {
+                  <div className="mediaName">{slicedResults?.map((m) => {
                     if (r.mediaId === m.id) {
-                      return m.name
+                      return m.title
                     }})}
                   </div>
-                  <button className="btn rec-delete"
+                  <button className="btn rec-delete" id={r.id}
                   onClick={event => {
                     event.preventDefault() 
                     handleRemove(r)
@@ -81,7 +92,7 @@ export const RecForm = () => {
                   <fieldset>
                   <div className="form-group">
                     <label htmlFor="recommendationRank">New Rank: </label>
-                    <input type="text" id="orderOfRecommend" required className="form-control"
+                    <input type="text" id={"orderOfRecommend", r.id} required className="form-control"
                     placeholder="Enter a Number"
                     onChange={(event) => event.target.value !== "" && handleOrderChange(parseInt(event.target.value), r)}
                     />
