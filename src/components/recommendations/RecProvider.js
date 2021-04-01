@@ -32,7 +32,7 @@ export const RecProvider = (props) => {
         return fetch(`http://localhost:8088/recommendations/${recId}`, {
             method: "DELETE"
         })
-            .then(getRecs)
+        .then(getRecs)
     }
 
     const updateRec = rec => {

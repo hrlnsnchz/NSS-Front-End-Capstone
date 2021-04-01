@@ -10,11 +10,9 @@ const handleLogout = () => {
 
 export const MediaList = () => {
     const {media, getMedia, searchTerms} = useContext(MediaContext)
-    console.log('media: ', media);
     
     const [results, setResults] = useState([])
     const slicedResults = results?.slice()
-    console.log('slicedResults: ', slicedResults);
 
     
 
