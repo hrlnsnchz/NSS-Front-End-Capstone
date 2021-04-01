@@ -9,11 +9,6 @@
       "id": 2,
       "name": "Antoinne Griezmann",
       "email": "grizzy@gmail.com"
-    },
-    {
-      "email": "bob@bobby.com",
-      "name": "bob bobby",
-      "id": 3
     }
   ],
   "media": [
@@ -21,43 +16,85 @@
       "id": 1,
       "movie": true,
       "name": "Blade Runner 2049",
-      "genreId": 2,
+      "genreId": [
+        {
+          "name": 1
+        },
+        {
+          "blah": 2
+        }
+      ],
       "streamingPlatformId": 2
     },
     {
       "id": 2,
       "movie": true,
       "name": "Pulp Fiction",
-      "genreId": 1,
+      "genreId": [
+        {
+          "name": 3
+        },
+        {
+          "blah": 4
+        }
+      ],
       "streamingPlatformId": 1
     },
     {
       "id": 3,
       "movie": true,
       "name": "John Wick",
-      "genreId": 1,
+      "genreId": [
+        {
+          "name": 5
+        },
+        {
+          "blah": 6
+        }
+      ],
       "streamingPlatformId": 2
     },
     {
       "id": 4,
       "movie": true,
       "name": "Watchmen",
-      "genreId": 2,
+      "genreId": [
+        {
+          "name": 7
+        },
+        {
+          "blah": 8
+        }
+      ],
       "streamingPlatformId": 2
     },
     {
       "id": 5,
       "movie": false,
       "name": "Game of Thrones",
-      "genreId": 2,
+      "genreId": [
+        {
+          "name": 9
+        },
+        {
+          "blah": 10
+        }
+      ],
       "streamingPlatformId": 2
     },
     {
       "id": 6,
       "movie": true,
-      "name": "Maze Runner",
-      "genreId": 2,
-      "streamingPlatformId": 4
+      "name": "Mad Max",
+      "genreId": [
+        {
+          "name": 11
+        },
+        {
+          "blah": 12
+        }
+      ],
+      "streamingPlatformId": 2
     }
   ],
   "streamingPlatforms": [

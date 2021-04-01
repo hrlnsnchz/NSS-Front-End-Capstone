@@ -10,55 +10,77 @@ const handleLogout = () => {
 
 export const MediaList = () => {
     const {media, getMedia, searchTerms} = useContext(MediaContext)
-     
+    console.log('media: ', media);
+    
+    const [results, setResults] = useState([])
+    const slicedResults = results?.slice()
+    console.log('slicedResults: ', slicedResults);
+
+    
+
+    useEffect(()=> {
+        setResults(media.results)
+    }, [media])
+
 
     useEffect(() => {
         getMedia()
     }, [])
 
-    const [ filteredMedia, setFiltered ] = useState([])
+    // const [ filteredMedia, setFiltered ] = useState([])
 
-    useEffect(() => {
-        if (searchTerms !== "") {
-            // If the search field is not blank, display matching animals
-            const subset = media.filter(m => m.name.toLowerCase().includes(searchTerms.toLowerCase()))
-            setFiltered(subset)
-        } else {
-             // If the search field is blank, display all animals
-            setFiltered(media)
-        }
-    }, [searchTerms, media])
+    // useEffect(() => {
+    //     if (searchTerms !== "") {
+    //         // If the search field is not blank, display matching animals
+    //         const subset = media.filter(m => m.name.toLowerCase().includes(searchTerms.toLowerCase()))
+    //         setFiltered(subset)
+    //     } else {
+    //          // If the search field is blank, display all animals
+    //         setFiltered(media)
+    //     }
+    // }, [searchTerms, media])
+
     return (
         <>
         <button className="logout" onClick={handleLogout}>
         <Link to="/login">{sessionStorage.getItem("app_user_id")? "Logout" : "Login"}</Link>
         </button>
 
-        <h3>Browse Media</h3>
+        <h3>Popular</h3>
         <div className="mediaList">
             {
-                filteredMedia.map(m => {
-                   return <MediaCard key={m.id}
-                   media={m}
-                   />
+                slicedResults?.map(m => {
+                    return <MediaCard key={m.id}
+                    media={m} />
                 })
             }
         </div>
 
-        <h3>Action</h3>
+        {/* <h3>Action</h3>
         <div className="mediaList">
             {
-                media.map(m => {
-                    if (m.genreId === 1) {
-                        return <MediaCard key={m.id}
-                        media={m}
-                        />
-                    }
-                })
-            }
-        </div>
+               media.results.map(r => {
+                return r.title
+               })
+            } */}
+        {/* {
+      "id": 1,
+      "movie": true,
+      "name": "Blade Runner 2049",
+      "genreId": [
+        {
+          "name": 1
+        },
+        {
+          "name": 2
+        }
+      ],
+      "streamingPlatformId": 2
+    }, */}
 
-        <h3>Science Fiction</h3>
+        {/* </div> */}
+
+        {/* <h3>Science Fiction</h3>
         <div className="mediaList">
             {
                 media.map(m => {
@@ -69,7 +91,7 @@ export const MediaList = () => {
                     }
                 })
             }
-        </div>
+        </div> */}
 
 
         
