@@ -11,48 +11,12 @@
       "email": "grizzy@gmail.com"
     }
   ],
-  "media": [
+  "recommendations": [
     {
-      "id": 1,
-      "movie": true,
-      "name": "Blade Runner 2049",
-      "genreId": 1,
-      "streamingPlatformId": 2
-    },
-    {
-      "id": 2,
-      "movie": true,
-      "name": "Pulp Fiction",
-      "genreId": 2,
-      "streamingPlatformId": 1
-    },
-    {
-      "id": 3,
-      "movie": true,
-      "name": "John Wick",
-      "genreId": 1,
-      "streamingPlatformId": 2
-    },
-    {
-      "id": 4,
-      "movie": true,
-      "name": "Watchmen",
-      "genreId": 1,
-      "streamingPlatformId": 2
-    },
-    {
-      "id": 5,
-      "movie": false,
-      "name": "Game of Thrones",
-      "genreId": 2,
-      "streamingPlatformId": 2
-    },
-    {
-      "id": 6,
-      "movie": true,
-      "name": "Mad Max",
-      "genreId": 1,
-      "streamingPlatformId": 2
+      "userId": 1,
+      "mediaId": 399566,
+      "orderOfRecommend": 3,
+      "id": 3
     }
   ],
   "streamingPlatforms": [
@@ -82,6 +46,5 @@
       "id": 2,
       "name": "Sci-fi"
     }
-  ],
-  "recommendations": []
+  ]
 }

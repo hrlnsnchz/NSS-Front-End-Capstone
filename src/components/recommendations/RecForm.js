@@ -51,19 +51,22 @@ export const RecForm = () => {
           .then(() => history.push(`/profile`))
   }
     
-    
+    let recId
     
     // Deleting
-    const handleRemove = (recObject) => {
-      removeRec(recObject)
-      .then(() => {
-        history.push("/profile")
-      })
-    }
+    const handleRemove = (event) => {
+      debugger
+      console.log (event)
+        removeRec(event)
+        .then(console.log(event))
+          .then(() => {
+            history.push("/profile")
+          })
+      }
+    
 
     const [results, setResults] = useState([])
     const slicedResults = results?.slice()
-    console.log('slicedResults: ', slicedResults);
 
     
 
@@ -77,7 +80,7 @@ export const RecForm = () => {
               <ol className="recommendationList">
                 {sortedRecs.map((r)=> {
                   return(
-                    <li className="recommendation">
+                    <li className="recommendation" key={r.id}>
                   <div className="mediaName">{slicedResults?.map((m) => {
                     if (r.mediaId === m.id) {
                       return m.title
@@ -86,7 +89,8 @@ export const RecForm = () => {
                   <button className="btn rec-delete" id={r.id}
                   onClick={event => {
                     event.preventDefault() 
-                    handleRemove(r)
+                    recId = r.id
+                    handleRemove(parseInt(r.id))
                   }}>
                   Delete Recommendation</button>
                   <fieldset>
