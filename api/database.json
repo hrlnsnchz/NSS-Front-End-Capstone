@@ -16,84 +16,42 @@
       "id": 1,
       "movie": true,
       "name": "Blade Runner 2049",
-      "genreId": [
-        {
-          "name": 1
-        },
-        {
-          "blah": 2
-        }
-      ],
+      "genreId": 1,
       "streamingPlatformId": 2
     },
     {
       "id": 2,
       "movie": true,
       "name": "Pulp Fiction",
-      "genreId": [
-        {
-          "name": 3
-        },
-        {
-          "blah": 4
-        }
-      ],
+      "genreId": 2,
       "streamingPlatformId": 1
     },
     {
       "id": 3,
       "movie": true,
       "name": "John Wick",
-      "genreId": [
-        {
-          "name": 5
-        },
-        {
-          "blah": 6
-        }
-      ],
+      "genreId": 1,
       "streamingPlatformId": 2
     },
     {
       "id": 4,
       "movie": true,
       "name": "Watchmen",
-      "genreId": [
-        {
-          "name": 7
-        },
-        {
-          "blah": 8
-        }
-      ],
+      "genreId": 1,
       "streamingPlatformId": 2
     },
     {
       "id": 5,
       "movie": false,
       "name": "Game of Thrones",
-      "genreId": [
-        {
-          "name": 9
-        },
-        {
-          "blah": 10
-        }
-      ],
+      "genreId": 2,
       "streamingPlatformId": 2
     },
     {
       "id": 6,
       "movie": true,
       "name": "Mad Max",
-      "genreId": [
-        {
-          "name": 11
-        },
-        {
-          "blah": 12
-        }
-      ],
+      "genreId": 1,
       "streamingPlatformId": 2
     }
   ],
@@ -125,18 +83,5 @@
       "name": "Sci-fi"
     }
   ],
-  "recommendations": [
-    {
-      "userId": 1,
-      "mediaId": 1,
-      "orderOfRecommend": 1,
-      "id": 1
-    },
-    {
-      "userId": 1,
-      "mediaId": 2,
-      "orderOfRecommend": 2,
-      "id": 2
-    }
-  ]
+  "recommendations": []
 }

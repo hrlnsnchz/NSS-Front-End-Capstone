@@ -19,6 +19,7 @@ export const MediaDetail = () => {
   useEffect(()=> {
     getRecs()
   }, [])
+
   useEffect(() => {
     getMediaById(mediaId)
     .then((response) => {
@@ -40,10 +41,11 @@ export const MediaDetail = () => {
 
   return (
     <section className="media">
-      <h3 className="media__name">{media.name}</h3>
-      <div className="media__type">{media.movie? "Movie" : "TV Series"}</div>
-      <div className="media__genre">Genre: {media.genre?.name}</div>
-      <div className="media__platform">Streaming Platform: {media.streamingPlatform?.name}</div>
+      <h3 className="media__name">{media.title}</h3>
+      <p className="media__overview">{media.overview}</p>
+      <p className="media__date">Release Date: {media.release_date}</p>
+      {/* <div className="media__genre">Genre: {media.genre?.name}</div> */}
+      {/* <div className="media__platform">Streaming Platform: {media.streamingPlatform?.name}</div> */}
       {sessionStorage.getItem("app_user_id")? <button className="btn btn-primary"
           onClick={event => {
             event.preventDefault()
