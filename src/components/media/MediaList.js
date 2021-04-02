@@ -25,24 +25,31 @@ export const MediaList = () => {
         getMedia()
     }, [])
 
-    // const [ filteredMedia, setFiltered ] = useState([])
+    const [ filteredMedia, setFiltered ] = useState([])
+    console.log('filteredMedia: ', filteredMedia);
+    
 
-    // useEffect(() => {
-    //     if (searchTerms !== "") {
-    //         // If the search field is not blank, display matching animals
-    //         const subset = media.filter(m => m.name.toLowerCase().includes(searchTerms.toLowerCase()))
-    //         setFiltered(subset)
-    //     } else {
-    //          // If the search field is blank, display all animals
-    //         setFiltered(media)
-    //     }
-    // }, [searchTerms, media])
+    useEffect(() => {
+        if (searchTerms !== "") {
+            const subset = searchTerms.results
+            setFiltered(subset)
+        }
+    }, [searchTerms, media])
 
     return (
         <>
         <button className="logout" onClick={handleLogout}>
         <Link to="/login">{sessionStorage.getItem("app_user_id")? "Logout" : "Login"}</Link>
         </button>
+
+        <div className="searchResults">
+          {
+            filteredMedia?.map(m => {
+                    return <MediaCard key ={m.id}
+                                media={m} />
+              })
+          }
+          </div>
 
         <h3>Popular</h3>
         <div className="mediaList">

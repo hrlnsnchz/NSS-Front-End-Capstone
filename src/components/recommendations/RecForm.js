@@ -51,7 +51,7 @@ export const RecForm = () => {
           .then(() => history.push(`/profile`))
   }
     
-    let recId
+
     
     // Deleting
     const handleRemove = (event) => {
@@ -89,7 +89,6 @@ export const RecForm = () => {
                   <button className="btn rec-delete" id={r.id}
                   onClick={event => {
                     event.preventDefault() 
-                    recId = r.id
                     handleRemove(parseInt(r.id))
                   }}>
                   Delete Recommendation</button>
