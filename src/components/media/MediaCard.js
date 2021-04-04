@@ -5,10 +5,10 @@ export const MediaCard = ({media}) => {
     const imgSize = "w500"
     return (
         <section className="mediaCard">
-            <h3><Link to={`/detail/${media.id}`}>
-          { media.title }
-        </Link></h3>
+        <a href={`/detail/${media.id}`}>
+
         <img src={`${testAPI.baseURL}/${imgSize}/${media.poster_path}`} alt={media.name, "poster"} ></img>
+        </a>
         </section>
     )
 }

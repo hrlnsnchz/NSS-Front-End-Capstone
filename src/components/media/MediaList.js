@@ -42,7 +42,7 @@ export const MediaList = () => {
         <Link to="/login">{sessionStorage.getItem("app_user_id")? "Logout" : "Login"}</Link>
         </button>
 
-        <div className="searchResults">
+        <div className="mediaList search">
           {
             filteredMedia?.map(m => {
                     return <MediaCard key ={m.id}

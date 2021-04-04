@@ -14,9 +14,17 @@
   "recommendations": [
     {
       "userId": 1,
-      "mediaId": 347201,
+      "mediaId": 78,
+      "mediaTitle": "Blade Runner",
       "orderOfRecommend": 1,
-      "id": 1
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "mediaId": 587996,
+      "mediaTitle": "Below Zero",
+      "orderOfRecommend": 2,
+      "id": 3
     }
   ],
   "streamingPlatforms": [
@@ -45,6 +53,13 @@
     {
       "id": 2,
       "name": "Sci-fi"
+    }
+  ],
+  "friends": [
+    {
+      "userId": 2,
+      "currentUserId": 1,
+      "id": 1
     }
   ]
 }

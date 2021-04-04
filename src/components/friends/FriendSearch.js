@@ -1,11 +1,25 @@
-import React, {useState, useEffect, useContext}from "react"
-import {UserContext} from "./UserProvider"
-import {UserCard} from "./User"
+import React, { useContext, useEffect, useState } from "react"
+import { UserCard } from "../users/User"
+import { UserContext } from "../users/UserProvider"
 
 
+export const FriendSearch = () => {
+  const { setSearchTerms } = useContext(UserContext)
+  
+
+  
+  return (
+    <>
+      Friend search:
+      <input type="text" 
+        className="input--wide"
+        onKeyUp={(event) => setSearchTerms(event.target.value)}
+        placeholder="Search for a friend... " />
+    </>
+  )
+}
 export const UserList = () => {
     const { users, getUsers, searchTerms } = useContext(UserContext)
-    console.log('users: ', users);
 
     useEffect(() => {
         getUsers()
