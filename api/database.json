@@ -25,6 +25,27 @@
       "mediaTitle": "Below Zero",
       "orderOfRecommend": 2,
       "id": 3
+    },
+    {
+      "userId": 2,
+      "mediaId": 791373,
+      "mediaTitle": "Zack Snyder's Justice League",
+      "orderOfRecommend": 3,
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "mediaId": 587807,
+      "mediaTitle": "Tom & Jerry",
+      "orderOfRecommend": 4,
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "mediaId": 529203,
+      "mediaTitle": "The Croods: A New Age",
+      "orderOfRecommend": 5,
+      "id": 6
     }
   ],
   "streamingPlatforms": [
@@ -60,6 +81,11 @@
       "userId": 2,
       "currentUserId": 1,
       "id": 1
+    },
+    {
+      "userId": 1,
+      "currentUserId": null,
+      "id": 2
     }
   ]
 }

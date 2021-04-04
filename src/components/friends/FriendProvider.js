@@ -11,8 +11,6 @@ export const FriendProvider = (props) => {
         .then(setFriends)
     }
 
-    // const [ searchTerms, setSearchTerms ] = useState("")
-
     const addFriend = (friendObj) => {
         return fetch("http://localhost:8088/friends", {
             method: "POST",
