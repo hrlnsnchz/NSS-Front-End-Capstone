@@ -2,6 +2,7 @@ import React, { useContext } from "react"
 import { testAPI } from "../../Settings"
 import { MediaContext } from "./MediaProvider"
 
+
 export const MediaSearch = () => {
   const { searchTerms, setSearchTerms, handleAPISearch } = useContext(MediaContext)
 

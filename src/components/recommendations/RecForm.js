@@ -55,7 +55,6 @@ export const RecForm = () => {
     
     // Deleting
     const handleRemove = (event) => {
-      debugger
       console.log (event)
         removeRec(event)
         .then(console.log(event))
@@ -81,10 +80,9 @@ export const RecForm = () => {
                 {sortedRecs.map((r)=> {
                   return(
                     <li className="recommendation" key={r.id}>
-                  <div className="mediaName">{slicedResults?.map((m) => {
-                    if (r.mediaId === m.id) {
-                      return m.title
-                    }})}
+                  <div className="mediaName">{
+                       r.mediaTitle
+                    }
                   </div>
                   <button className="btn rec-delete" id={r.id}
                   onClick={event => {

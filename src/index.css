@@ -5,7 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(192, 187, 187, 0.329);
+  /* background-image: url(./components/images/background.png);
+  background-size: cover;
+  background-position: center; */
 }
 
 code {

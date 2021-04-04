@@ -11,6 +11,9 @@ import { UserSearch } from "./users/UserSearch"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { RecForm } from "./recommendations/RecForm"
+import { FriendList } from "./friends/FriendList"
+import { FriendProvider } from "./friends/FriendProvider"
+
 
 export const ApplicationViews = () => {
     return (
@@ -35,10 +38,13 @@ export const ApplicationViews = () => {
                 </MediaProvider>
             </RecProvider>
             <UserProvider>
-            <Route exact path="/friends">
-                    <UserSearch />
-                    <UserList />
-                </Route>
+                <FriendProvider>
+                    <Route exact path="/friends" >
+                         <UserSearch />  
+                         <UserList />
+                        </Route>
+                    <Route exact path="/friends" render={() => sessionStorage.getItem("app_user_id") ? <FriendList />  : <UserList /> } />
+                </FriendProvider>
             </UserProvider>
 
             <Route path="/login">

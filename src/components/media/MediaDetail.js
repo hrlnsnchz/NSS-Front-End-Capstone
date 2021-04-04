@@ -35,6 +35,7 @@ export const MediaDetail = () => {
       addRecs({
           userId: currentUser,
           mediaId: media.id,
+          mediaTitle: media.title,
           orderOfRecommend: sortedRecs[0]? sortedRecs[sortedRecs.length - 1].orderOfRecommend + 1 : 1
       })
   }
