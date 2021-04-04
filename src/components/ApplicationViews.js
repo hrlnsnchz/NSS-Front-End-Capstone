@@ -13,6 +13,7 @@ import { Register } from "./auth/Register"
 import { RecForm } from "./recommendations/RecForm"
 import { FriendList } from "./friends/FriendList"
 import { FriendProvider } from "./friends/FriendProvider"
+import { UserProfile } from "./users/UserProfile"
 
 
 export const ApplicationViews = () => {
@@ -25,7 +26,6 @@ export const ApplicationViews = () => {
                         <MediaList />
                     </Route>
                     <Route path="/detail/:mediaId(\d+)">
-                        <MediaSearch />
                         <MediaDetail />
                     </Route>
                 </RecProvider>
@@ -34,6 +34,9 @@ export const ApplicationViews = () => {
                 <MediaProvider>
                     <UserProvider>
                         <Route exact path="/profile" render={() => sessionStorage.getItem("app_user_id") ? <RecForm /> : <Redirect to="/login" />} />
+                        <Route path="/profile/:userId(\d+)">
+                        <UserProfile />
+                    </Route>
                     </UserProvider>
                 </MediaProvider>
             </RecProvider>
@@ -42,8 +45,8 @@ export const ApplicationViews = () => {
                     <Route exact path="/friends" >
                          <UserSearch />  
                          <UserList />
-                        </Route>
-                    <Route exact path="/friends" render={() => sessionStorage.getItem("app_user_id") ? <FriendList />  : <UserList /> } />
+                    </Route>
+                    <Route exact path="/friends" render={() => sessionStorage.getItem("app_user_id") ? <FriendList />  : "" } />
                 </FriendProvider>
             </UserProvider>
 

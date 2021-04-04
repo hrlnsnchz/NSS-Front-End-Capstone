@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react"
-import { useHistory } from "react-router-dom"
+import { useHistory, Link } from "react-router-dom"
 import { FriendContext } from "../friends/FriendProvider"
 
 
@@ -15,25 +15,27 @@ export const UserCard = ({user}) => {
 
 
   const history = useHistory()
-  const handleAddFriend = () => {
+  // const handleAddFriend = () => {
         
-        addFriend({
-            userId: user.id,
-            currentUserId: currentUser
-        })
-        .then(() => history.push("/friends"))
-      }
+  //       addFriend({
+  //           userId: user.id,
+  //           currentUserId: currentUser
+  //       })
+  //       .then(() => history.push("/friends"))
+  //     }
       if (user.id !== currentUser) {
         console.log("friend", friend)
         return (
           <section className="user">
-        <h3 className="user__name">
+        <h3 className="user__name"> <Link to={`/profile/${user.id}`}>
           {user.name + "  "}
-          {<button className="btn btn-primary"
+          
+          {/* {<button className="btn btn-primary"
           onClick={event => {
             event.preventDefault()
             handleAddFriend()
-          }}>Add Friend</button>}
+          }}>Add Friend</button>} */}
+          </Link>
         </h3>
         
     </section>

@@ -10,7 +10,7 @@ export const RecForm = () => {
     const {recs, getRecs, removeRec, updateRec } = useContext(RecContext)
     const {getUsers} = useContext(UserContext)
     const {media, getMedia} = useContext(MediaContext)
-    // const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
+    const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
     
     
     const [sortedRecs, setSortedRecs] = useState([])
@@ -78,12 +78,13 @@ export const RecForm = () => {
               <h3>My List</h3>
               <ol className="recommendationList">
                 {sortedRecs.map((r)=> {
+                  if (r.userId === currentUser) {
                   return(
                     <li className="recommendation" key={r.id}>
-                  <div className="mediaName">{
+                      <div className="mediaName">{
                        r.mediaTitle
-                    }
-                  </div>
+                      }
+                      </div>
                   <button className="btn rec-delete" id={r.id}
                   onClick={event => {
                     event.preventDefault() 
@@ -101,6 +102,7 @@ export const RecForm = () => {
                   </fieldset>
                   </li>
                     )
+                  }
                   })}
               </ol>
               <button className="btn rec-save"

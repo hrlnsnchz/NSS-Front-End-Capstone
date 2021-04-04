@@ -27,22 +27,25 @@ export const FriendList = () => {
     }, [searchTerms, users])
 
     return (
-        <div className="friendList">
-            
-            {
-                friends.map(friend => {
-                    const sessionUserId = sessionStorage.getItem("app_user_id")
-                    const currentUser = users.find(user => user.id === parseInt(sessionUserId))
-                    const userObject = users.find(user => user.id === friend.userId)
-                    const reversedRoleCurrentUser = users.find(user => user.id === friend.currentUserId)
-                return <FriendCard key={friend.id}
-                            userObject={userObject}
-                            currentUser={currentUser}
-                            reversedRoleCurrentUser={reversedRoleCurrentUser}
-                            friend={friend} />
-                })            
-            }
-            <button onClick={() => history.push("/friends/search")} className="searchFriendsButton">Search for Friends</button>
-        </div>
+        <>
+            <h3>Friends</h3>
+            <div className="friendList">
+                
+                {
+                    friends.map(friend => {
+                        const sessionUserId = sessionStorage.getItem("app_user_id")
+                        const currentUser = users.find(user => user.id === parseInt(sessionUserId))
+                        const userObject = users.find(user => user.id === friend.userId)
+                        const reversedRoleCurrentUser = users.find(user => user.id === friend.currentUserId)
+                        return <FriendCard key={friend.id}
+                        userObject={userObject}
+                        currentUser={currentUser}
+                        reversedRoleCurrentUser={reversedRoleCurrentUser}
+                        friend={friend} />
+                    })            
+                }
+                <button onClick={() => history.push("/friends/search")} className="searchFriendsButton">Search for Friends</button>
+            </div>
+        </>
     )
 }

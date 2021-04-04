@@ -10,11 +10,10 @@ export const UserSearch = () => {
   
   return (
     <>
-      Friend search:
       <input type="text" 
         className="input--wide"
         onKeyUp={(event) => setSearchTerms(event.target.value)}
-        placeholder="Search for a friend... " />
+        placeholder="Search for other users... " />
     </>
   )
 }
