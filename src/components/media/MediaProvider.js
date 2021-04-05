@@ -8,13 +8,13 @@ export const MediaProvider = (props) => {
     const [media, setMedia] = useState([])
 
     const getMedia = () => {
-        return fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${testAPI.apiKey}&language=en-US&page=1`)
+        return fetch(`https://api.themoviedb.org/3/trending/all/week?api_key=${testAPI.apiKey}`)
         .then(res => res.json())
         .then(setMedia)
     }
 
-    const getMediaById = (id) => {
-        return fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${testAPI.apiKey}&language=en-US`)
+    const getMediaById = (id, mediaType) => {
+        return fetch(`https://api.themoviedb.org/3/${mediaType}/${id}?api_key=${testAPI.apiKey}&language=en-US`)
             .then(res => res.json())
     }
 

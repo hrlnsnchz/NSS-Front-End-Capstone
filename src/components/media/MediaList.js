@@ -26,7 +26,6 @@ export const MediaList = () => {
     }, [])
 
     const [ filteredMedia, setFiltered ] = useState([])
-    console.log('filteredMedia: ', filteredMedia);
     
 
     useEffect(() => {
