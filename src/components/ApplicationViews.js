@@ -37,6 +37,7 @@ export const ApplicationViews = () => {
                         <Route path="/profile/:userId(\d+)">
                         <UserProfile />
                     </Route>
+                    
                     </UserProvider>
                 </MediaProvider>
             </RecProvider>

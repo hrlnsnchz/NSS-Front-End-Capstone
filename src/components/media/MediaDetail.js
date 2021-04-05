@@ -18,7 +18,6 @@ export const MediaDetail = () => {
   const [streamPlats, setStreamPlats] = useState([])
   
   const streamPlatsArray = streamPlats.results?.US?.flatrate
-  console.log('slicedStreamPlats: ', streamPlatsArray);
 
 	
 
@@ -58,6 +57,10 @@ export const MediaDetail = () => {
           mediaTitle: media.name? media.name : media.title,
           // slicedGenres could not be assigned before being assigned a value in the useEffect hook
           genres: slicedGenres? slicedGenres: "No Genre Available",
+          // URL for media's poster
+          posterPath: media.poster_path, 
+          mediaType: mediaType, //currently not approved
+          
           // order of recommend starts at 1 if the index at 0 does not exist, otherwise I add 1 to push it to the bottom of the list
           orderOfRecommend: sortedRecs[0]? sortedRecs[sortedRecs.length - 1].orderOfRecommend + 1 : 1 
       })
@@ -65,6 +68,9 @@ export const MediaDetail = () => {
 
   return (
     <section className="media">
+      
+
+      <img src={`http://image.tmdb.org/t/p/w500/${media.poster_path}`} alt={media.name, "poster"} ></img>
       <h3 className="media__name">{media.name? media.name : media.title}</h3>
       <p className="media__overview">{media.overview}</p>
       <p className="media__date">Released: {media.release_date? media.release_date : media.first_air_date}</p>
@@ -81,5 +87,6 @@ export const MediaDetail = () => {
             handleAddRec()
           }}>Recommend It</button> : ""}
     </section>
+    
   )
 }
