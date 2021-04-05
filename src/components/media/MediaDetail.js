@@ -2,7 +2,10 @@ import React, { useContext, useEffect, useState } from "react"
 import { MediaContext } from "./MediaProvider"
 import { useParams } from "react-router-dom"
 import {RecContext} from "../recommendations/RecProvider"
-
+import "./MediaDetail.css"
+import Card from 'react-bootstrap/Card'
+import ListGroup from 'react-bootstrap/ListGroup'
+import Button from 'react-bootstrap/Button'
 
 export const MediaDetail = () => {
   const { getMediaById, getStreamPlatsById } = useContext(MediaContext)
@@ -67,16 +70,59 @@ export const MediaDetail = () => {
   }
 
   return (
-    <section className="media">
-      
+    <>
+    <img className="media__image" src={`http://image.tmdb.org/t/p/w500/${media.poster_path}`} alt={media.name, "poster"} ></img>
+    <Card style={{ width: '40rem' }}>
+    <Card.Body>
+        <Card.Title>{media.name? media.name : media.title}</Card.Title>
+    <Card.Text>
+        {media.overview}
+    </Card.Text>
+      </Card.Body>
+    <ListGroup className="list-group-flush">
+    <ListGroup.Item>{slicedGenres?.map(g => {
+      return (<p className="genre" key={g.id}> {g.name}</p>)
+    })}</ListGroup.Item>
+      <ListGroup.Item>
+      {media.release_date? new Date(media.release_date).getFullYear() : new Date(media.first_air_date).getFullYear()}
+      </ListGroup.Item>
+      <ListGroup.Item>
+      {streamPlatsArray?.map(sP => {
+        return (<p className="streamingPlatform" key={sP.provider_id}>{sP.provider_name}</p>)
+      })}
+      </ListGroup.Item>
+    </ListGroup>
+      {sessionStorage.getItem("app_user_id")? <Button variant="info" className="btn btn-primary"
+          onClick={event => {
+            event.preventDefault()
+            handleAddRec()
+          }}>Recommend It</Button> : ""}
+    </Card>
+    </>
+    
+  )
+}
 
-      <img src={`http://image.tmdb.org/t/p/w500/${media.poster_path}`} alt={media.name, "poster"} ></img>
+{/* <Card style={{ width: '18rem' }}>
+  <Card.Img variant="top" src={`http://image.tmdb.org/t/p/w500/${media.poster_path}/100px180`}" />
+  <Card.Body>
+    <Card.Title>{media.name? media.name : media.title}</Card.Title>
+    <Card.Text>
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </Card.Text>
+    <Button variant="primary">Go somewhere</Button>
+  </Card.Body>
+</Card> */}
+
+{/* <article>
+      <img className="media__image" src={`http://image.tmdb.org/t/p/w500/${media.poster_path}`} alt={media.name, "poster"} ></img>
       <h3 className="media__name">{media.name? media.name : media.title}</h3>
-      <p className="media__overview">{media.overview}</p>
-      <p className="media__date">Released: {media.release_date? media.release_date : media.first_air_date}</p>
-      <div className="media__list genres">Genres:{slicedGenres?.map(g => {
+      <div className="media__genres">{slicedGenres?.map(g => {
         return (<p className="genre" key={g.id}> {g.name}</p>)
       })}</div>
+      <p className="media__date">{media.release_date? new Date(media.release_date).getFullYear() : new Date(media.first_air_date).getFullYear()}</p> 
+      <p className="media__overview">{media.overview}</p>
       <h3>{streamPlatsArray? "Watch it on:" : ""}</h3>
       <div className="media_list streamingPlatforms">{streamPlatsArray?.map(sP => {
         return (<p className="streamingPlatform" key={sP.provider_id}>{sP.provider_name}</p>)
@@ -86,7 +132,6 @@ export const MediaDetail = () => {
             event.preventDefault()
             handleAddRec()
           }}>Recommend It</button> : ""}
-    </section>
-    
-  )
-}
+    </article>
+    <section className="media">
+          </section> */}

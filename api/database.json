@@ -19,6 +19,11 @@
       "email": "carlos@gmail.com",
       "name": "Carlos Padron",
       "id": 4
+    },
+    {
+      "email": "yese@gmail.com",
+      "name": "Yesenia Ramirez",
+      "id": 5
     }
   ],
   "recommendations": [
@@ -109,6 +114,52 @@
       "mediaType": "tv",
       "orderOfRecommend": 4,
       "id": 4
+    },
+    {
+      "userId": 1,
+      "mediaId": 78,
+      "mediaTitle": "Blade Runner",
+      "genres": [
+        {
+          "id": 878,
+          "name": "Science Fiction"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 53,
+          "name": "Thriller"
+        }
+      ],
+      "posterPath": "/qLX91FhHWCVrxDVsw0g2UD5c3Zk.jpg",
+      "mediaType": "movie",
+      "orderOfRecommend": 5,
+      "id": 5
+    },
+    {
+      "userId": 5,
+      "mediaId": 520763,
+      "mediaTitle": "A Quiet Place Part II",
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 878,
+          "name": "Science Fiction"
+        },
+        {
+          "id": 53,
+          "name": "Thriller"
+        }
+      ],
+      "posterPath": "/4q2hz2m8hubgvijz8Ez0T2Os2Yv.jpg",
+      "mediaType": "movie",
+      "orderOfRecommend": 6,
+      "id": 6
     }
   ],
   "streamingPlatforms": [

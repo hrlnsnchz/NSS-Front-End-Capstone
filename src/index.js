@@ -4,6 +4,7 @@ import './index.css';
 import {Capstone} from "./components/Capstone"
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
