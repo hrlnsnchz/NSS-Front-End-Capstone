@@ -9,43 +9,356 @@
       "id": 2,
       "name": "Antoinne Griezmann",
       "email": "grizzy@gmail.com"
+    },
+    {
+      "email": "maria@gmail.com",
+      "name": "Maria Villalobos",
+      "id": 3
+    },
+    {
+      "email": "carlos@gmail.com",
+      "name": "Carlos Padron",
+      "id": 4
     }
   ],
   "recommendations": [
     {
-      "userId": 1,
-      "mediaId": 78,
-      "mediaTitle": "Blade Runner",
+      "userId": 2,
+      "mediaId": 399566,
+      "mediaTitle": "Godzilla vs. Kong",
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 878,
+          "name": "Science Fiction"
+        }
+      ],
       "orderOfRecommend": 1,
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "mediaId": 508442,
+      "mediaTitle": "Soul",
+      "genres": [
+        {
+          "id": 10751,
+          "name": "Family"
+        },
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10402,
+          "name": "Music"
+        },
+        {
+          "id": 14,
+          "name": "Fantasy"
+        }
+      ],
+      "orderOfRecommend": 2,
       "id": 2
     },
     {
-      "userId": 1,
-      "mediaId": 587996,
-      "mediaTitle": "Below Zero",
-      "orderOfRecommend": 2,
+      "userId": 2,
+      "mediaId": 1429,
+      "mediaTitle": "Attack on Titan",
+      "genres": [
+        {
+          "id": 10765,
+          "name": "Sci-Fi & Fantasy"
+        },
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 10759,
+          "name": "Action & Adventure"
+        }
+      ],
+      "orderOfRecommend": 3,
       "id": 3
     },
     {
-      "userId": 2,
-      "mediaId": 791373,
-      "mediaTitle": "Zack Snyder's Justice League",
-      "orderOfRecommend": 3,
+      "userId": 1,
+      "mediaId": 399566,
+      "mediaTitle": "Godzilla vs. Kong",
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 878,
+          "name": "Science Fiction"
+        }
+      ],
+      "orderOfRecommend": 4,
       "id": 4
     },
     {
-      "userId": 2,
-      "mediaId": 587807,
-      "mediaTitle": "Tom & Jerry",
-      "orderOfRecommend": 4,
+      "userId": 3,
+      "mediaId": 19995,
+      "mediaTitle": "Avatar",
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
+        },
+        {
+          "id": 14,
+          "name": "Fantasy"
+        },
+        {
+          "id": 878,
+          "name": "Science Fiction"
+        }
+      ],
+      "orderOfRecommend": 5,
       "id": 5
     },
     {
-      "userId": 2,
-      "mediaId": 529203,
-      "mediaTitle": "The Croods: A New Age",
-      "orderOfRecommend": 5,
+      "userId": 3,
+      "mediaId": 10625,
+      "mediaTitle": "Mean Girls",
+      "genres": [
+        {
+          "id": 35,
+          "name": "Comedy"
+        }
+      ],
+      "orderOfRecommend": 6,
       "id": 6
+    },
+    {
+      "userId": 3,
+      "mediaId": 63333,
+      "mediaTitle": "The Last Kingdom",
+      "genres": [
+        {
+          "id": 10759,
+          "name": "Action & Adventure"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "orderOfRecommend": 7,
+      "id": 7
+    },
+    {
+      "userId": 3,
+      "mediaId": 34549,
+      "mediaTitle": "The Great British Bake Off",
+      "genres": [
+        {
+          "id": 10764,
+          "name": "Reality"
+        }
+      ],
+      "orderOfRecommend": 8,
+      "id": 8
+    },
+    {
+      "userId": 3,
+      "mediaId": 69740,
+      "mediaTitle": "Ozark",
+      "genres": [
+        {
+          "id": 80,
+          "name": "Crime"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "orderOfRecommend": 9,
+      "id": 9
+    },
+    {
+      "userId": 3,
+      "mediaId": 71912,
+      "mediaTitle": "The Witcher",
+      "genres": [
+        {
+          "id": 10765,
+          "name": "Sci-Fi & Fantasy"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10759,
+          "name": "Action & Adventure"
+        }
+      ],
+      "orderOfRecommend": 10,
+      "id": 10
+    },
+    {
+      "userId": 3,
+      "mediaId": 6479,
+      "mediaTitle": "I Am Legend",
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 878,
+          "name": "Science Fiction"
+        },
+        {
+          "id": 53,
+          "name": "Thriller"
+        }
+      ],
+      "orderOfRecommend": 11,
+      "id": 11
+    },
+    {
+      "userId": 3,
+      "mediaId": 12429,
+      "mediaTitle": "Ponyo",
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 10751,
+          "name": "Family"
+        }
+      ],
+      "orderOfRecommend": 12,
+      "id": 12
+    },
+    {
+      "userId": 3,
+      "mediaId": 11036,
+      "mediaTitle": "The Notebook",
+      "genres": [
+        {
+          "id": 10749,
+          "name": "Romance"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "orderOfRecommend": 13,
+      "id": 13
+    },
+    {
+      "userId": 4,
+      "mediaId": 87083,
+      "mediaTitle": "Formula 1: Drive to Survive",
+      "genres": [
+        {
+          "id": 99,
+          "name": "Documentary"
+        }
+      ],
+      "orderOfRecommend": 14,
+      "id": 14
+    },
+    {
+      "userId": 4,
+      "mediaId": 76669,
+      "mediaTitle": "Elite",
+      "genres": [
+        {
+          "id": 80,
+          "name": "Crime"
+        },
+        {
+          "id": 9648,
+          "name": "Mystery"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "orderOfRecommend": 15,
+      "id": 15
+    },
+    {
+      "userId": 4,
+      "mediaId": 87826,
+      "mediaTitle": "Selling Sunset",
+      "genres": [
+        {
+          "id": 10764,
+          "name": "Reality"
+        }
+      ],
+      "orderOfRecommend": 16,
+      "id": 16
+    },
+    {
+      "userId": 4,
+      "mediaId": 9032,
+      "mediaTitle": "Big Daddy",
+      "genres": [
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "orderOfRecommend": 17,
+      "id": 17
+    },
+    {
+      "userId": 4,
+      "mediaId": 256591,
+      "mediaTitle": "Focus",
+      "genres": [
+        {
+          "id": 10749,
+          "name": "Romance"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 80,
+          "name": "Crime"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "orderOfRecommend": 18,
+      "id": 18
     }
   ],
   "streamingPlatforms": [
@@ -76,16 +389,5 @@
       "name": "Sci-fi"
     }
   ],
-  "friends": [
-    {
-      "userId": 2,
-      "currentUserId": 1,
-      "id": 1
-    },
-    {
-      "userId": 1,
-      "currentUserId": null,
-      "id": 2
-    }
-  ]
+  "friends": []
 }

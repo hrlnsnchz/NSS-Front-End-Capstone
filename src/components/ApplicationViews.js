@@ -25,7 +25,7 @@ export const ApplicationViews = () => {
                         <MediaSearch />
                         <MediaList />
                     </Route>
-                    <Route path="/detail/:mediaId(\d+)">
+                    <Route path="/detail/:mediaId/:mediaType">
                         <MediaDetail />
                     </Route>
                 </RecProvider>
@@ -46,7 +46,6 @@ export const ApplicationViews = () => {
                          <UserSearch />  
                          <UserList />
                     </Route>
-                    <Route exact path="/friends" render={() => sessionStorage.getItem("app_user_id") ? <FriendList />  : "" } />
                 </FriendProvider>
             </UserProvider>
 

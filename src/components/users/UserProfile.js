@@ -11,16 +11,13 @@ export const UserProfile = () => {
     const [user, setUsers] = useState([])
 
     const {userId} = useParams()
-    console.log('userId: ', userId);
 
     useEffect(() => {
         getRecs()
     }, [])
 
     const [sortedRecs, setSortedRecs] = useState([])
-    console.log('sortedRecs: ', sortedRecs.map(s=> {
-        return (s.userId)
-    }));
+    
 
     useEffect(() => {
         setSortedRecs(recs.sort((a, b) => a.orderOfRecommend - b.orderOfRecommend))

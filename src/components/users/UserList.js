@@ -5,7 +5,6 @@ import {UserCard} from "./User"
 
 export const UserList = () => {
     const { users, getUsers, searchTerms } = useContext(UserContext)
-    console.log('users: ', users);
 
     useEffect(() => {
         getUsers()

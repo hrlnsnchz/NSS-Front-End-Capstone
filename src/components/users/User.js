@@ -24,7 +24,6 @@ export const UserCard = ({user}) => {
   //       .then(() => history.push("/friends"))
   //     }
       if (user.id !== currentUser) {
-        console.log("friend", friend)
         return (
           <section className="user">
         <h3 className="user__name"> <Link to={`/profile/${user.id}`}>

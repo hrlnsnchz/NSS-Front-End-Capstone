@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
 import { MediaContext } from "./MediaProvider"
-import { useParams, useHistory } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import {RecContext} from "../recommendations/RecProvider"
 
 
@@ -13,38 +13,50 @@ export const MediaDetail = () => {
 
 	const [media, setMedia] = useState({})
 
-	const {mediaId} = useParams();
-	// const history = useHistory();
+	const {mediaId, mediaType} = useParams();
+	
+  
 
   useEffect(()=> {
     getRecs()
   }, [])
 
   useEffect(() => {
-    getMediaById(mediaId)
+    getMediaById(mediaId, mediaType)
     .then((response) => {
       setMedia(response)
     })
     }, [])
 
-    const history = useHistory()
+    const [genres, setGenres] = useState([])
+
+    useEffect(()=> {
+      setGenres(media.genres)
+  }, [media])
+  
+  const slicedGenres = genres?.slice()
 
     const handleAddRec = () => {
-
-      // orderOfRecommend: 3
       addRecs({
           userId: currentUser,
           mediaId: media.id,
-          mediaTitle: media.title,
-          orderOfRecommend: sortedRecs[0]? sortedRecs[sortedRecs.length - 1].orderOfRecommend + 1 : 1
+          // mediaTitle property names vary by media type
+          mediaTitle: media.name? media.name : media.title,
+          // slicedGenres could not be assigned before being assigned a value in the useEffect hook
+          genres: slicedGenres? slicedGenres: "No Genre Available",
+          // order of recommend starts at 1 if the index at 0 does not exist, otherwise I add 1 to push it to the bottom of the list
+          orderOfRecommend: sortedRecs[0]? sortedRecs[sortedRecs.length - 1].orderOfRecommend + 1 : 1 
       })
   }
 
   return (
     <section className="media">
-      <h3 className="media__name">{media.title}</h3>
+      <h3 className="media__name">{media.name? media.name : media.title}</h3>
       <p className="media__overview">{media.overview}</p>
-      <p className="media__date">Release Date: {media.release_date}</p>
+      {slicedGenres?.map(g => {
+        return (<p className="genre" key={g.id}> {g.name}</p>)
+      })}
+      <p className="media__date">Release Date: {media.release_date? media.release_date : media.first_air_date}</p>
       {/* <div className="media__genre">Genre: {media.genre?.name}</div> */}
       {/* <div className="media__platform">Streaming Platform: {media.streamingPlatform?.name}</div> */}
       {sessionStorage.getItem("app_user_id")? <button className="btn btn-primary"

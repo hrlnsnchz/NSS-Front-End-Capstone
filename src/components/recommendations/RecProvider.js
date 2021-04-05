@@ -43,7 +43,6 @@ export const RecProvider = (props) => {
           },
           body: JSON.stringify(rec)
         })
-          .then(getRecs)
       }
 
 
