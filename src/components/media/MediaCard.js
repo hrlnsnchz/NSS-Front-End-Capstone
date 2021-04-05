@@ -8,7 +8,7 @@ export const MediaCard = ({media}) => {
         <section className="mediaCard">
         <a href={`/detail/${media.id}/${media.media_type}`}>
 
-        <img src={`${testAPI.baseURL}/${imgSize}/${media.poster_path}`} alt={media.name, "poster"} ></img>
+        <img src={`http://image.tmdb.org/t/p/${imgSize}/${media.poster_path}`} alt={media.name, "poster"} ></img>
         </a>
         </section>
         </>
