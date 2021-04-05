@@ -5,7 +5,7 @@ import {RecContext} from "../recommendations/RecProvider"
 
 
 export const MediaDetail = () => {
-  const { getMediaById } = useContext(MediaContext)
+  const { getMediaById, getStreamPlatsById } = useContext(MediaContext)
   const {recs, getRecs, addRecs } = useContext(RecContext)
   const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
   const sortedRecs = recs.sort((a, b)=> a.orderOfRecommend - b.orderOfRecommend)
@@ -14,7 +14,14 @@ export const MediaDetail = () => {
 	const [media, setMedia] = useState({})
 
 	const {mediaId, mediaType} = useParams();
+
+  const [streamPlats, setStreamPlats] = useState([])
+  
+  const streamPlatsArray = streamPlats.results?.US?.flatrate
+  console.log('slicedStreamPlats: ', streamPlatsArray);
+
 	
+
   
 
   useEffect(()=> {
@@ -26,6 +33,13 @@ export const MediaDetail = () => {
     .then((response) => {
       setMedia(response)
     })
+    }, [])
+
+    useEffect(() => {
+      getStreamPlatsById(mediaId, mediaType)
+      .then((response) => {
+        setStreamPlats(response)
+      })
     }, [])
 
     const [genres, setGenres] = useState([])
@@ -53,12 +67,14 @@ export const MediaDetail = () => {
     <section className="media">
       <h3 className="media__name">{media.name? media.name : media.title}</h3>
       <p className="media__overview">{media.overview}</p>
-      {slicedGenres?.map(g => {
+      <p className="media__date">Released: {media.release_date? media.release_date : media.first_air_date}</p>
+      <div className="media__list genres">Genres:{slicedGenres?.map(g => {
         return (<p className="genre" key={g.id}> {g.name}</p>)
-      })}
-      <p className="media__date">Release Date: {media.release_date? media.release_date : media.first_air_date}</p>
-      {/* <div className="media__genre">Genre: {media.genre?.name}</div> */}
-      {/* <div className="media__platform">Streaming Platform: {media.streamingPlatform?.name}</div> */}
+      })}</div>
+      <h3>{streamPlatsArray? "Watch it on:" : ""}</h3>
+      <div className="media_list streamingPlatforms">{streamPlatsArray?.map(sP => {
+        return (<p className="streamingPlatform" key={sP.provider_id}>{sP.provider_name}</p>)
+      })}</div>
       {sessionStorage.getItem("app_user_id")? <button className="btn btn-primary"
           onClick={event => {
             event.preventDefault()
