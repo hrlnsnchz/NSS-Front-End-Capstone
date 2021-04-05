@@ -1,10 +1,10 @@
+
 .mediaList {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 
 }
-
 .mediaCard {
     flex-basis: 15%;
       
@@ -12,11 +12,13 @@
       
 }
 
-.logout {
-    float: right;
-    margin-right: 3%;
+Form {
+    margin-top: 2em;
 }
 
-.media {
-    justify-content: left;
+
+
+
+.trending__text {
+    text-align: center;
 }

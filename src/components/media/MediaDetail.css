@@ -1,0 +1,22 @@
+img.media__image {
+    width: 25%;
+    height: auto;
+    float: left;
+    margin-left: 2em;
+    margin-top: 2em;
+    margin-right: 1em;
+    
+}
+
+
+p.genre {
+    /* padding-right: 2em; */
+    margin-bottom: 0;
+}
+.card {
+    margin-top: 2em;
+}
+div.list-group-item {
+    display: flex;
+    justify-content: space-evenly;
+}

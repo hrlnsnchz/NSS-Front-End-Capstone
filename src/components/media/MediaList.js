@@ -4,9 +4,9 @@ import { MediaContext } from "./MediaProvider"
 import {Link} from "react-router-dom"
 import "./Media.css"
 
-const handleLogout = () => {
-    sessionStorage.removeItem("app_user_id")
-}
+// const handleLogout = () => {
+//     sessionStorage.removeItem("app_user_id")
+// }
 
 export const MediaList = () => {
     const {media, getMedia, searchTerms} = useContext(MediaContext)
@@ -37,9 +37,9 @@ export const MediaList = () => {
 
     return (
         <>
-        <button className="logout" onClick={handleLogout}>
+        {/* <button className="logout" onClick={handleLogout}>
         <Link to="/login">{sessionStorage.getItem("app_user_id")? "Logout" : "Login"}</Link>
-        </button>
+        </button> */}
 
         <div className="mediaList search">
           {
@@ -50,7 +50,7 @@ export const MediaList = () => {
           }
           </div>
 
-        <h3>Popular</h3>
+        <h3 className="trending__text">Trending</h3>
         <div className="mediaList">
             {
                 slicedResults?.map(m => {
