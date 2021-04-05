@@ -67,7 +67,7 @@ export const RecForm = () => {
     const [results, setResults] = useState([])
     const slicedResults = results?.slice()
 
-    
+    const imgSize = "w500"
 
     useEffect(()=> {
         setResults(media.results)
@@ -78,13 +78,18 @@ export const RecForm = () => {
               <h3>My List</h3>
               <ol className="recommendationList">
                 {sortedRecs.map((r)=> {
+                  
                   if (r.userId === currentUser) {
                   return(
                     <li className="recommendation" key={r.id}>
-                      <div className="mediaName">{
+                      {/* <div className="mediaName">{
                        r.mediaTitle
                       }
-                      </div>
+                      </div> */}
+                      <a href={`/detail/${r.mediaId}/${r.mediaType}`}>
+
+                      <img src={`http://image.tmdb.org/t/p/${imgSize}/${r.posterPath}`} alt={r.mediaTitle, " ", "poster"} ></img>
+                      </a>
                   <button className="btn rec-delete" id={r.id}
                   onClick={event => {
                     event.preventDefault() 

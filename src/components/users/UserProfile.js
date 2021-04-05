@@ -30,6 +30,8 @@ export const UserProfile = () => {
         })
     }, [])
 
+    const imgSize = "w500"
+
     return (
         <>
             <section className="userProfile">
@@ -39,11 +41,9 @@ export const UserProfile = () => {
                         if (r.userId === parseInt(userId)) {
                             return (
                                 <li className="recommendation" key={r.id}>
-                                    <div className="mediaName">{
-                                        r.mediaTitle
-                                    }
-
-                                    </div>
+                                    <a href={`/detail/${r.mediaId}/${r.mediaType}`}>
+                                    <img src={`http://image.tmdb.org/t/p/${imgSize}/${r.posterPath}`} alt={r.name, "poster"} ></img>
+                                    </a>
                                 </li>
                             )
                         }
