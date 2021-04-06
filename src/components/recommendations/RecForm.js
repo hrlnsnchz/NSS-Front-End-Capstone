@@ -62,9 +62,7 @@ export const RecForm = () => {
     
     // Deleting
     const handleRemove = (event) => {
-      console.log (event)
         removeRec(event)
-        .then(console.log(event))
           .then(() => {
             history.push("/profile")
           })

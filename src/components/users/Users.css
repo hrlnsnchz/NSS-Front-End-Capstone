@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+.recommendationsList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+div.card {
+    margin-right: 1.5em;
+    margin-top: .5em;
+}
+
+ol.recommendationsList {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+}
+
+ol.recommendationsList li.recommendation__user {
+    padding: 1%;
+    counter-increment: my-awesome-counter;
+}
+
+h3.userProfile__name {
+    text-align: center;
+    margin-bottom: 3%;
+    margin-top: 1%;
+}
+
+h3.userSearchHeadline {
+    text-align: center;
+    margin-bottom: 3%;
+    margin-top: 1%;
+}
+
+ol.recommendationsList li.recommendation__user::before {
+    content: counter(my-awesome-counter) ". ";
+    color: black;
+    font-weight: bold;
+    font-family: 'Abril Fatface', serif;
+}
+  
+body {
+    font-family: Montserrat, sans-serif;
+}

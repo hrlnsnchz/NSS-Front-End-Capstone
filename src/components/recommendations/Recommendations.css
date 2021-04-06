@@ -4,9 +4,6 @@
     flex-wrap: wrap;
 }
 
-.recommendation {
-}
-
 h3.recListHeader {
     text-align: center;
     margin-bottom: 3%;
@@ -26,15 +23,14 @@ Button.rec-save {
 
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
 
-ol {
+ol.recommendationList {
     list-style: none;
     counter-reset: my-awesome-counter;
-    
   }
-  ol li {
+  ol.recommendationList li.recommendation {
     counter-increment: my-awesome-counter;
   }
-  ol li::before {
+  ol.recommendationList li.recommendation::before {
     content: counter(my-awesome-counter) ". ";
     color: black;
     font-weight: bold;

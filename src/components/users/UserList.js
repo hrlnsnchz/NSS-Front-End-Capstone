@@ -8,7 +8,6 @@ export const UserList = () => {
 
     useEffect(() => {
         getUsers()
-        // .then(getFriends)
     }, [])
 
     const [ filteredUsers, setFiltered ] = useState([])
@@ -25,8 +24,9 @@ export const UserList = () => {
     }, [searchTerms, users])
 
     return (
+        <>
+        
         <div className="userList">
-            
             {
                 filteredUsers.map(filteredUser => {
                         return <UserCard key={filteredUser.id}
@@ -35,5 +35,6 @@ export const UserList = () => {
                     })            
             }
         </div>
+        </>
     )
 }
