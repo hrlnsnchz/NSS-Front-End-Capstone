@@ -3,7 +3,12 @@ import { useHistory } from "react-router"
 import { MediaContext } from "../media/MediaProvider"
 import { UserContext } from "../users/UserProvider"
 import { RecContext } from "./RecProvider"
+import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
 import "./Recommendations.css"
+import Col from 'react-bootstrap/Col'
+import Form from 'react-bootstrap/Form'
+
 
 
 export const RecForm = () => {
@@ -21,11 +26,12 @@ export const RecForm = () => {
       .then(getRecs)
     }, [])
 
+    //Sorting recs after they are defined
       useEffect(() => {
         setSortedRecs(recs.sort((a, b) => a.orderOfRecommend - b.orderOfRecommend))
       }, [recs])
 
-
+      // Changing order of recs
       const handleOrderChange = (newOrder, recObject) => {
         const recsToSort = sortedRecs.slice()
         //remove rec from it's current position
@@ -43,6 +49,7 @@ export const RecForm = () => {
 
       const history = useHistory()
 
+      // Saving
     const handleSaveRec = () => {
         const recsPromiseArray = sortedRecs.map(rec => {
           return updateRec((rec))
@@ -65,57 +72,55 @@ export const RecForm = () => {
     
 
     const [results, setResults] = useState([])
-    const slicedResults = results?.slice()
+    
 
-    const imgSize = "w500"
+    const imgSize = "w500" //URL param
 
     useEffect(()=> {
         setResults(media.results)
-    }, [media])
+    }, [media]) //need to get results from media after initial render
     
           return (
             <>
-              <h3>My List</h3>
+              <h3 className="recListHeader">My Recommendations</h3>
               <ol className="recommendationList">
                 {sortedRecs.map((r)=> {
-                  
                   if (r.userId === currentUser) {
                   return(
                     <li className="recommendation" key={r.id}>
-                      {/* <div className="mediaName">{
-                       r.mediaTitle
-                      }
-                      </div> */}
-                      <a href={`/detail/${r.mediaId}/${r.mediaType}`}>
+                      <Card style={{ width: '8rem' }}>
 
-                      <img src={`http://image.tmdb.org/t/p/${imgSize}/${r.posterPath}`} alt={r.mediaTitle, " ", "poster"} ></img>
+                      <a href={`/detail/${r.mediaId}/${r.mediaType}`}>
+                      <Card.Img variant="top" src={`http://image.tmdb.org/t/p/${imgSize}/${r.posterPath}`} alt={r.mediaTitle, " ", "poster"} />
                       </a>
-                  <button className="btn rec-delete" id={r.id}
-                  onClick={event => {
-                    event.preventDefault() 
-                    handleRemove(parseInt(r.id))
-                  }}>
-                  Delete Recommendation</button>
-                  <fieldset>
-                  <div className="form-group">
-                    <label htmlFor="recommendationRank">New Rank: </label>
-                    <input type="text" id={"orderOfRecommend", r.id} required className="form-control"
-                    placeholder="Enter a Number"
-                    onChange={(event) => event.target.value !== "" && handleOrderChange(parseInt(event.target.value), r)}
-                    />
-                    </div>
-                  </fieldset>
+                  <Form>
+                  <Form.Row className="align-items-center">
+                  <Col xs="auto">
+                    <Form.Control
+                    type="text" id={"orderOfRecommend", r.id} required className="form-control" size="sm"
+                    placeholder="Edit Rank"
+                    onChange={(event) => event.target.value !== "" && handleOrderChange(parseInt(event.target.value), r)} />
+                    </Col>
+                    </Form.Row>
+                    </Form>
+                      <Button variant="outline-danger" className="btn rec-delete" size="sm" id={r.id}
+                      onClick={event => {
+                        event.preventDefault() 
+                        handleRemove(parseInt(r.id))
+                      }}>
+                    Remove</Button>
+                    </Card>
                   </li>
                     )
                   }
                   })}
               </ol>
-              <button className="btn rec-save"
+                <Button variant="outline-success" className="btn rec-save" size="sm"
                   onClick={event => {
                     event.preventDefault() 
                     handleSaveRec()
                   }}>
-                  Save New Hierarchy</button>
+                  Save Changes</Button>
       </>
 )
-}      
+}
