@@ -3,19 +3,17 @@ img.media__image {
     height: auto;
     float: left;
     margin-left: 2em;
-    margin-top: 2em;
+    margin-top: .8%;
     margin-right: 1em;
-    
+    border-radius: 1%;
 }
 
 
 p.genre {
-    /* padding-right: 2em; */
+    
     margin-bottom: 0;
 }
-.card {
-    margin-top: 2em;
-}
+
 div.list-group-item {
     display: flex;
     justify-content: space-evenly;

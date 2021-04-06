@@ -28,225 +28,14 @@
   ],
   "recommendations": [
     {
-      "userId": 4,
-      "mediaId": 399566,
-      "mediaTitle": "Godzilla vs. Kong",
+      "userId": 1,
+      "mediaId": 76341,
+      "mediaTitle": "Mad Max: Fury Road",
       "genres": [
         {
           "id": 28,
           "name": "Action"
         },
-        {
-          "id": 878,
-          "name": "Science Fiction"
-        }
-      ],
-      "posterPath": "/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
-      "mediaType": "movie",
-      "orderOfRecommend": 3,
-      "id": 1
-    },
-    {
-      "userId": 4,
-      "mediaId": 88396,
-      "mediaTitle": "The Falcon and the Winter Soldier",
-      "genres": [
-        {
-          "id": 10765,
-          "name": "Sci-Fi & Fantasy"
-        },
-        {
-          "id": 10759,
-          "name": "Action & Adventure"
-        },
-        {
-          "id": 18,
-          "name": "Drama"
-        }
-      ],
-      "posterPath": "/6kbAMLteGO8yyewYau6bJ683sw7.jpg",
-      "mediaType": "tv",
-      "orderOfRecommend": 4,
-      "id": 2
-    },
-    {
-      "userId": 4,
-      "mediaId": 69050,
-      "mediaTitle": "Riverdale",
-      "genres": [
-        {
-          "id": 9648,
-          "name": "Mystery"
-        },
-        {
-          "id": 18,
-          "name": "Drama"
-        },
-        {
-          "id": 80,
-          "name": "Crime"
-        }
-      ],
-      "posterPath": "/wRbjVBdDo5qHAEOVYoMWpM58FSA.jpg",
-      "mediaType": "tv",
-      "orderOfRecommend": 5,
-      "id": 3
-    },
-    {
-      "userId": 4,
-      "mediaId": 95557,
-      "mediaTitle": "Invincible",
-      "genres": [
-        {
-          "id": 16,
-          "name": "Animation"
-        },
-        {
-          "id": 10759,
-          "name": "Action & Adventure"
-        },
-        {
-          "id": 18,
-          "name": "Drama"
-        }
-      ],
-      "posterPath": "/yDWJYRAwMNKbIYT8ZB33qy84uzO.jpg",
-      "mediaType": "tv",
-      "orderOfRecommend": 6,
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "mediaId": 78,
-      "mediaTitle": "Blade Runner",
-      "genres": [
-        {
-          "id": 878,
-          "name": "Science Fiction"
-        },
-        {
-          "id": 18,
-          "name": "Drama"
-        },
-        {
-          "id": 53,
-          "name": "Thriller"
-        }
-      ],
-      "posterPath": "/qLX91FhHWCVrxDVsw0g2UD5c3Zk.jpg",
-      "mediaType": "movie",
-      "orderOfRecommend": 7,
-      "id": 5
-    },
-    {
-      "userId": 5,
-      "mediaId": 520763,
-      "mediaTitle": "A Quiet Place Part II",
-      "genres": [
-        {
-          "id": 18,
-          "name": "Drama"
-        },
-        {
-          "id": 878,
-          "name": "Science Fiction"
-        },
-        {
-          "id": 53,
-          "name": "Thriller"
-        }
-      ],
-      "posterPath": "/4q2hz2m8hubgvijz8Ez0T2Os2Yv.jpg",
-      "mediaType": "movie",
-      "orderOfRecommend": 8,
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "mediaId": 508442,
-      "mediaTitle": "Soul",
-      "genres": [
-        {
-          "id": 10751,
-          "name": "Family"
-        },
-        {
-          "id": 16,
-          "name": "Animation"
-        },
-        {
-          "id": 35,
-          "name": "Comedy"
-        },
-        {
-          "id": 18,
-          "name": "Drama"
-        },
-        {
-          "id": 10402,
-          "name": "Music"
-        },
-        {
-          "id": 14,
-          "name": "Fantasy"
-        }
-      ],
-      "posterPath": "/hm58Jw4Lw8OIeECIq5qyPYhAeRJ.jpg",
-      "mediaType": "movie",
-      "orderOfRecommend": 9,
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "mediaId": 1429,
-      "mediaTitle": "Attack on Titan",
-      "genres": [
-        {
-          "id": 10765,
-          "name": "Sci-Fi & Fantasy"
-        },
-        {
-          "id": 16,
-          "name": "Animation"
-        },
-        {
-          "id": 10759,
-          "name": "Action & Adventure"
-        }
-      ],
-      "posterPath": "/aiy35Evcofzl7hASZZvsFgltHTX.jpg",
-      "mediaType": "tv",
-      "orderOfRecommend": 1,
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "mediaId": 95557,
-      "mediaTitle": "Invincible",
-      "genres": [
-        {
-          "id": 16,
-          "name": "Animation"
-        },
-        {
-          "id": 10759,
-          "name": "Action & Adventure"
-        },
-        {
-          "id": 18,
-          "name": "Drama"
-        }
-      ],
-      "posterPath": "/yDWJYRAwMNKbIYT8ZB33qy84uzO.jpg",
-      "mediaType": "tv",
-      "orderOfRecommend": 2,
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "mediaId": 299534,
-      "mediaTitle": "Avengers: Endgame",
-      "genres": [
         {
           "id": 12,
           "name": "Adventure"
@@ -254,21 +43,36 @@
         {
           "id": 878,
           "name": "Science Fiction"
-        },
-        {
-          "id": 28,
-          "name": "Action"
         }
       ],
-      "posterPath": "/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg",
+      "posterPath": "/8tZYtuWezp8JbcsvHYO0O46tFbo.jpg",
       "mediaType": "movie",
-      "orderOfRecommend": 10,
-      "id": 10
+      "orderOfRecommend": 1,
+      "id": 1
     },
     {
       "userId": 1,
-      "mediaId": 399566,
-      "mediaTitle": "Godzilla vs. Kong",
+      "mediaId": 335984,
+      "mediaTitle": "Blade Runner 2049",
+      "genres": [
+        {
+          "id": 878,
+          "name": "Science Fiction"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "posterPath": "/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
+      "mediaType": "movie",
+      "orderOfRecommend": 2,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "mediaId": 27205,
+      "mediaTitle": "Inception",
       "genres": [
         {
           "id": 28,
@@ -277,35 +81,275 @@
         {
           "id": 878,
           "name": "Science Fiction"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
         }
       ],
-      "posterPath": "/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
+      "posterPath": "/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
       "mediaType": "movie",
-      "orderOfRecommend": 12,
-      "id": 12
+      "orderOfRecommend": 3,
+      "id": 3
     },
     {
       "userId": 1,
-      "mediaId": 85271,
-      "mediaTitle": "WandaVision",
+      "mediaId": 9552,
+      "mediaTitle": "The Exorcist",
+      "genres": [
+        {
+          "id": 27,
+          "name": "Horror"
+        }
+      ],
+      "posterPath": "/4ucLGcXVVSVnsfkGtbLY4XAius8.jpg",
+      "mediaType": "movie",
+      "orderOfRecommend": 4,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "mediaId": 118340,
+      "mediaTitle": "Guardians of the Galaxy",
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 878,
+          "name": "Science Fiction"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
+        }
+      ],
+      "posterPath": "/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg",
+      "mediaType": "movie",
+      "orderOfRecommend": 5,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "mediaId": 1399,
+      "mediaTitle": "Game of Thrones",
       "genres": [
         {
           "id": 10765,
           "name": "Sci-Fi & Fantasy"
         },
         {
-          "id": 9648,
-          "name": "Mystery"
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10759,
+          "name": "Action & Adventure"
+        }
+      ],
+      "posterPath": "/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
+      "mediaType": "tv",
+      "orderOfRecommend": 6,
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "mediaId": 1104,
+      "mediaTitle": "Mad Men",
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "posterPath": "/5jOedTeytYzlJZwU66MFjmLHhHX.jpg",
+      "mediaType": "tv",
+      "orderOfRecommend": 7,
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "mediaId": 95479,
+      "mediaTitle": "Jujutsu Kaisen",
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 10759,
+          "name": "Action & Adventure"
+        },
+        {
+          "id": 10765,
+          "name": "Sci-Fi & Fantasy"
+        }
+      ],
+      "posterPath": "/g1rK2nRXSidcMwNliWDIroWWGTn.jpg",
+      "mediaType": "tv",
+      "orderOfRecommend": 8,
+      "id": 8
+    },
+    {
+      "userId": 3,
+      "mediaId": 19995,
+      "mediaTitle": "Avatar",
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
+        },
+        {
+          "id": 14,
+          "name": "Fantasy"
+        },
+        {
+          "id": 878,
+          "name": "Science Fiction"
+        }
+      ],
+      "posterPath": "/6EiRUJpuoeQPghrs3YNktfnqOVh.jpg",
+      "mediaType": "movie",
+      "orderOfRecommend": 9,
+      "id": 9
+    },
+    {
+      "userId": 3,
+      "mediaId": 10625,
+      "mediaTitle": "Mean Girls",
+      "genres": [
+        {
+          "id": 35,
+          "name": "Comedy"
+        }
+      ],
+      "posterPath": "/fXm3YKXAEjx7d2tIWDg9TfRZtsU.jpg",
+      "mediaType": "movie",
+      "orderOfRecommend": 10,
+      "id": 10
+    },
+    {
+      "userId": 3,
+      "mediaId": 63333,
+      "mediaTitle": "The Last Kingdom",
+      "genres": [
+        {
+          "id": 10759,
+          "name": "Action & Adventure"
         },
         {
           "id": 18,
           "name": "Drama"
         }
       ],
-      "posterPath": "/glKDfE6btIRcVB5zrjspRIs4r52.jpg",
+      "posterPath": "/wUFIEJCSmurmXPX0mP0cEgoltrk.jpg",
+      "mediaType": "tv",
+      "orderOfRecommend": 11,
+      "id": 11
+    },
+    {
+      "userId": 3,
+      "mediaId": 34549,
+      "mediaTitle": "The Great British Bake Off",
+      "genres": [
+        {
+          "id": 10764,
+          "name": "Reality"
+        }
+      ],
+      "posterPath": "/4lkXuLZhxUczr8ufy0tKgSRRYD2.jpg",
+      "mediaType": "tv",
+      "orderOfRecommend": 12,
+      "id": 12
+    },
+    {
+      "userId": 3,
+      "mediaId": 69740,
+      "mediaTitle": "Ozark",
+      "genres": [
+        {
+          "id": 80,
+          "name": "Crime"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "posterPath": "/oy7Peo5iFIt9sNM59lN6csbJeX2.jpg",
       "mediaType": "tv",
       "orderOfRecommend": 13,
       "id": 13
+    },
+    {
+      "userId": 3,
+      "mediaId": 71912,
+      "mediaTitle": "The Witcher",
+      "genres": [
+        {
+          "id": 10765,
+          "name": "Sci-Fi & Fantasy"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10759,
+          "name": "Action & Adventure"
+        }
+      ],
+      "posterPath": "/zrPpUlehQaBf8YX2NrVrKK8IEpf.jpg",
+      "mediaType": "tv",
+      "orderOfRecommend": 14,
+      "id": 14
+    },
+    {
+      "userId": 3,
+      "mediaId": 6479,
+      "mediaTitle": "I Am Legend",
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 878,
+          "name": "Science Fiction"
+        },
+        {
+          "id": 53,
+          "name": "Thriller"
+        }
+      ],
+      "posterPath": "/iPDkaSdKk2jRLTM65UOEoKtsIZ8.jpg",
+      "mediaType": "movie",
+      "orderOfRecommend": 15,
+      "id": 15
+    },
+    {
+      "userId": 3,
+      "mediaId": 12429,
+      "mediaTitle": "Ponyo",
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 10751,
+          "name": "Family"
+        }
+      ],
+      "posterPath": "/yp8vEZflGynlEylxEesbYasc06i.jpg",
+      "mediaType": "movie",
+      "orderOfRecommend": 16,
+      "id": 16
     }
   ],
   "streamingPlatforms": [

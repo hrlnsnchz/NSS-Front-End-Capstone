@@ -18,10 +18,10 @@ export const NavBar = (props) => {
             </Navbar.Brand>
             <Nav className="mr-auto">
                 <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/friends">Users</Nav.Link>
+                <Nav.Link href="/users">Users</Nav.Link>
                 <Nav.Link href="/profile">My List</Nav.Link>
             </Nav>
-            <Button className="logout" variant="outline-info" onClick={handleLogout}>
+            <Button size="sm" className="logout" variant="outline-info" onClick={handleLogout}>
                 <Link to="/login">{sessionStorage.getItem("app_user_id")? "Logout" : "Login"}</Link>
             </Button>
         </Navbar>

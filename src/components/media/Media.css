@@ -5,18 +5,19 @@
     justify-content: space-evenly;
 
 }
-.mediaCard {
-    flex-basis: 15%;
-      
-      padding: 1em;
-      
+section.mediaCard {
+    width: 20%;
+    padding: 10px;  
 }
 
 Form {
     margin-top: 2em;
 }
 
-
+img.mediaCard__image {
+    width: 10em;
+    height: auto;
+}
 
 
 .trending__text {

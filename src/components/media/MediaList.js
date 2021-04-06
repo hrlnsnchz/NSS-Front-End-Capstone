@@ -4,9 +4,6 @@ import { MediaContext } from "./MediaProvider"
 import {Link} from "react-router-dom"
 import "./Media.css"
 
-// const handleLogout = () => {
-//     sessionStorage.removeItem("app_user_id")
-// }
 
 export const MediaList = () => {
     const {media, getMedia, searchTerms} = useContext(MediaContext)
@@ -37,10 +34,6 @@ export const MediaList = () => {
 
     return (
         <>
-        {/* <button className="logout" onClick={handleLogout}>
-        <Link to="/login">{sessionStorage.getItem("app_user_id")? "Logout" : "Login"}</Link>
-        </button> */}
-
         <div className="mediaList search">
           {
             filteredMedia?.map(m => {
@@ -59,47 +52,6 @@ export const MediaList = () => {
                 })
             }
         </div>
-
-        {/* <h3>Action</h3>
-        <div className="mediaList">
-            {
-               media.results.map(r => {
-                return r.title
-               })
-            } */}
-        {/* {
-      "id": 1,
-      "movie": true,
-      "name": "Blade Runner 2049",
-      "genreId": [
-        {
-          "name": 1
-        },
-        {
-          "name": 2
-        }
-      ],
-      "streamingPlatformId": 2
-    }, */}
-
-        {/* </div> */}
-
-        {/* <h3>Science Fiction</h3>
-        <div className="mediaList">
-            {
-                media.map(m => {
-                    if (m.genreId === 2) {
-                        return <MediaCard key={m.id}
-                        media={m}
-                        />
-                    }
-                })
-            }
-        </div> */}
-
-
-        
-         
         </>
 )
 }

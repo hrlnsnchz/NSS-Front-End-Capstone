@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router"
 import { RecContext } from "../recommendations/RecProvider"
 import {UserContext} from "./UserProvider"
+import Card from 'react-bootstrap/Card'
+import './Users.css'
 
 export const UserProfile = () => {
     const {getUserById} = useContext(UserContext)
@@ -40,10 +42,13 @@ export const UserProfile = () => {
                     {sortedRecs.map((r)=>{
                         if (r.userId === parseInt(userId)) {
                             return (
-                                <li className="recommendation" key={r.id}>
+                                <li className="recommendation__user" key={r.id}>
+                                    <Card style={{ width: '8rem' }}>
+
                                     <a href={`/detail/${r.mediaId}/${r.mediaType}`}>
-                                    <img src={`http://image.tmdb.org/t/p/${imgSize}/${r.posterPath}`} alt={r.name, "poster"} ></img>
+                                    <Card.Img variant="top" src={`http://image.tmdb.org/t/p/${imgSize}/${r.posterPath}`} alt={r.name, "poster"} />
                                     </a>
+                                    </Card>
                                 </li>
                             )
                         }

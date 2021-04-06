@@ -43,7 +43,7 @@ export const ApplicationViews = () => {
             </RecProvider>
             <UserProvider>
                 <FriendProvider>
-                    <Route exact path="/friends" >
+                    <Route exact path="/users" >
                          <UserSearch />  
                          <UserList />
                     </Route>
