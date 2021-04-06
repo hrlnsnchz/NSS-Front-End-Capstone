@@ -1,12 +1,47 @@
 .recommendationList {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .recommendation {
 }
 
-img {
-    width: 10em;
-    height: auto;
+h3.recListHeader {
+    text-align: center;
+    margin-bottom: 3%;
+    margin-top: 1%;
 }
+
+div.card {
+    margin-right: 1.5em;
+    margin-top: .5em;
+}
+
+Button.rec-save {
+    margin-left: 43%;
+    margin-bottom: 10%
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+ol {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+    
+  }
+  ol li {
+    counter-increment: my-awesome-counter;
+  }
+  ol li::before {
+    content: counter(my-awesome-counter) ". ";
+    color: black;
+    font-weight: bold;
+    font-family: 'Abril Fatface', serif;
+  }
+  
+  body {
+    font-family: Montserrat, sans-serif;
+  }
+
